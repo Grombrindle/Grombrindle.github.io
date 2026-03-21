@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Haydra Ali | IT Engineer & Full Stack Developer</title>
+  <!-- Google Fonts + Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="theme-toggle-wrapper">
+    <button id="darkModeToggle" class="theme-btn" aria-label="Dark/Light mode">
+      <i class="fas fa-moon"></i>
+    </button>
+  </div>
+
+  <div class="container">
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-content">
+        <div class="hero-badge">Information Technology Engineer</div>
+        <h1 class="hero-name">Haydra Ali</h1>
+        <p class="hero-tagline">Building scalable backends, AI-powered tools, and seamless DevOps pipelines</p>
+        <div class="hero-meta">
+          <span><i class="fas fa-map-marker-alt"></i> Damascus, Syria / Remote</span>
+          <span><i class="fas fa-envelope"></i> haydraalio000@gmail.com</span>
+          <span><i class="fab fa-github"></i> github.com/Grombrindle</span>
+          <span><i class="fab fa-linkedin"></i> linkedin.com/in/haydra-ali</span>
+        </div>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-primary"><i class="fas fa-paper-plane"></i> Hire me</a>
+          <a href="#" class="btn-outline" id="downloadCV"><i class="fas fa-file-pdf"></i> Download CV</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div><span>4+</span> Years Exp.</div>
+        <div><span>15+</span> Projects</div>
+        <div><span>8+</span> Tech Stacks</div>
+      </div>
+    </header>
+
+    <!-- Tabs Navigation -->
+    <div class="tabs-nav">
+      <button class="tab-btn active" data-tab="backend">Backend</button>
+      <button class="tab-btn" data-tab="frontend">Frontend</button>
+      <button class="tab-btn" data-tab="devops">DevOps</button>
+      <button class="tab-btn" data-tab="fullstack">Full Stack</button>
+      <button class="tab-btn" data-tab="about">About</button>
+      <button class="tab-btn" data-tab="contact">Contact</button>
+    </div>
+
+    <!-- Tab Panels -->
+    <div class="tab-content">
+      <!-- Backend Panel -->
+      <div class="tab-pane active" id="backend">
+        <h2 class="section-title"><i class="fas fa-server"></i> Backend Engineering & APIs</h2>
+        <div class="projects-grid" id="backendProjects"></div>
+      </div>
+
+      <!-- Frontend Panel -->
+      <div class="tab-pane" id="frontend">
+        <h2 class="section-title"><i class="fas fa-laptop-code"></i> Frontend & UI Craftsmanship</h2>
+        <div class="projects-grid" id="frontendProjects"></div>
+      </div>
+
+      <!-- DevOps Panel -->
+      <div class="tab-pane" id="devops">
+        <h2 class="section-title"><i class="fas fa-cloud-upload-alt"></i> DevOps & Infrastructure</h2>
+        <div class="projects-grid" id="devopsProjects"></div>
+      </div>
+
+      <!-- Full Stack Panel -->
+      <div class="tab-pane" id="fullstack">
+        <h2 class="section-title"><i class="fas fa-layer-group"></i> Full Stack Applications</h2>
+        <div class="projects-grid" id="fullstackProjects"></div>
+      </div>
+
+      <!-- About Panel -->
+      <div class="tab-pane" id="about">
+        <div class="about-grid">
+          <div class="about-text">
+            <h3><i class="fas fa-user-astronaut"></i> Profile Summary</h3>
+            <p>Highly skilled IT Engineer with proven experience in full-stack development, specializing in Laravel, backend systems, and AI integration. Demonstrated ability to design scalable applications, lead dev teams, and streamline IT operations with a DevOps mindset. Proficient in RESTful APIs, monolithic apps, database optimization, and CI/CD pipelines (Docker + GitHub Actions).</p>
+            <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+            <p><strong>Damascus University</strong> — Information Technology Engineering (2022–Present)<br>4th year, specializing in Network Engineering, DevOps, Backend & System Administration.</p>
+            <h3><i class="fas fa-language"></i> Languages</h3>
+            <p>Arabic (Native) | English (Professional working proficiency)</p>
+          </div>
+          <div class="skills-section">
+            <h3><i class="fas fa-chart-line"></i> Core Proficiency</h3>
+            <div class="skill-item">
+              <span>PHP / Laravel</span>
+              <div class="progress-bar"><div class="progress" style="width: 92%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span>JavaScript / TypeScript</span>
+              <div class="progress-bar"><div class="progress" style="width: 88%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span>Go (Golang)</span>
+              <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span>.NET / C#</span>
+              <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span>Java / Spring Boot</span>
+              <div class="progress-bar"><div class="progress" style="width: 78%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span>Docker / CI/CD</span>
+              <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span>Databases (MySQL, PG, SQL Server)</span>
+              <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Panel -->
+      <div class="tab-pane" id="contact">
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <h3><i class="fas fa-paper-plane"></i> Let's Connect</h3>
+            <p>Open for backend leadership roles, full-stack contracts, or innovative AI-integrated projects.</p>
+            <ul class="contact-details">
+              <li><i class="fas fa-envelope"></i> haydraalio000@gmail.com</li>
+              <li><i class="fab fa-github"></i> github.com/Grombrindle</li>
+              <li><i class="fab fa-linkedin"></i> linkedin.com/in/haydra-ali</li>
+              <li><i class="fas fa-map-marker-alt"></i> Remote / Damascus, Syria</li>
+            </ul>
+          </div>
+          <form id="contactForm" class="contact-form">
+            <h3>Send a Message</h3>
+            <input type="text" id="name" placeholder="Your name" required>
+            <input type="email" id="email" placeholder="Email address" required>
+            <textarea rows="5" id="message" placeholder="Project idea / opportunity ..." required></textarea>
+            <button type="submit" class="btn-primary"><i class="fas fa-location-arrow"></i> Reach out</button>
+            <p class="form-note">* demo form — opens your mail client</p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 Haydra Ali — Built with <i class="fas fa-code"></i> & modern workflows. Deployed on GitHub Pages.</p>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
