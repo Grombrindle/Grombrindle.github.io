@@ -1,157 +1,261 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Haydra Ali | IT Engineer & Full Stack Developer</title>
-  <!-- Google Fonts + Font Awesome -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haydra Ali | IT Engineer & Full‑Stack Developer</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons: Material Symbols + Font Awesome for brand icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-lowest": "#000000",
+                        "on-surface": "#dee5ff",
+                        "tertiary-fixed": "#00f1fe",
+                        "surface-container-highest": "#192540",
+                        "on-secondary-fixed-variant": "#7511c3",
+                        "surface": "#060e20",
+                        "surface-container": "#0f1930",
+                        "on-surface-variant": "#a3aac4",
+                        "surface-dim": "#060e20",
+                        "on-secondary-container": "#e9cdff",
+                        "outline-variant": "#40485d",
+                        "tertiary-container": "#00f1fe",
+                        "on-primary-container": "#002150",
+                        "on-secondary": "#33005b",
+                        "on-error": "#490006",
+                        "surface-variant": "#192540",
+                        "on-tertiary-fixed-variant": "#006065",
+                        "primary-fixed": "#6e9fff",
+                        "inverse-primary": "#005bc4",
+                        "on-background": "#dee5ff",
+                        "on-primary-fixed": "#000000",
+                        "inverse-surface": "#faf8ff",
+                        "surface-container-low": "#091328",
+                        "primary": "#85adff",
+                        "on-secondary-fixed": "#4f0089",
+                        "tertiary-dim": "#00e2ee",
+                        "secondary-container": "#6f00be",
+                        "secondary-fixed": "#e5c6ff",
+                        "on-primary": "#002c66",
+                        "tertiary-fixed-dim": "#00e2ee",
+                        "surface-container-high": "#141f38",
+                        "primary-dim": "#699cff",
+                        "primary-fixed-dim": "#5391ff",
+                        "outline": "#6d758c",
+                        "secondary-fixed-dim": "#dbb4ff",
+                        "tertiary": "#99f7ff",
+                        "surface-bright": "#1f2b49",
+                        "surface-tint": "#85adff",
+                        "secondary-dim": "#9c48ea",
+                        "background": "#060e20",
+                        "on-tertiary": "#005f64",
+                        "error": "#ff716c",
+                        "on-primary-fixed-variant": "#002a62",
+                        "inverse-on-surface": "#4d556b",
+                        "on-error-container": "#ffa8a3",
+                        "primary-container": "#6e9fff",
+                        "error-dim": "#d7383b",
+                        "secondary": "#c180ff",
+                        "error-container": "#9f0519",
+                        "on-tertiary-container": "#00555a"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <div class="theme-toggle-wrapper">
-    <button id="darkModeToggle" class="theme-btn" aria-label="Dark/Light mode">
-      <i class="fas fa-moon"></i>
-    </button>
-  </div>
+<body class="bg-surface text-on-surface font-body overflow-x-hidden">
 
-  <div class="container">
-    <!-- Hero Section -->
-    <header class="hero">
-      <div class="hero-content">
-        <div class="hero-badge">Information Technology Engineer</div>
-        <h1 class="hero-name">Haydra Ali</h1>
-        <p class="hero-tagline">Building scalable backends, AI-powered tools, and seamless DevOps pipelines</p>
-        <div class="hero-meta">
-          <span><i class="fas fa-map-marker-alt"></i> Damascus, Syria / Remote</span>
-          <span><i class="fas fa-envelope"></i> haydraalio000@gmail.com</span>
-          <span><i class="fab fa-github"></i> github.com/Grombrindle</span>
-          <span><i class="fab fa-linkedin"></i> linkedin.com/in/haydra-ali</span>
-        </div>
-        <div class="hero-buttons">
-          <a href="#contact" class="btn-primary"><i class="fas fa-paper-plane"></i> Hire me</a>
-          <a href="#" class="btn-outline" id="downloadCV"><i class="fas fa-file-pdf"></i> Download CV</a>
-        </div>
-      </div>
-      <div class="hero-stats">
-        <div><span>4+</span> Years Exp.</div>
-        <div><span>15+</span> Projects</div>
-        <div><span>8+</span> Tech Stacks</div>
-      </div>
-    </header>
+<!-- Custom Cursor Elements -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
 
-    <!-- Tabs Navigation -->
-    <div class="tabs-nav">
-      <button class="tab-btn active" data-tab="backend">Backend</button>
-      <button class="tab-btn" data-tab="frontend">Frontend</button>
-      <button class="tab-btn" data-tab="devops">DevOps</button>
-      <button class="tab-btn" data-tab="fullstack">Full Stack</button>
-      <button class="tab-btn" data-tab="about">About</button>
-      <button class="tab-btn" data-tab="contact">Contact</button>
+<!-- Navigation Shell -->
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] rounded-full border border-white/10 bg-[#0f1930]/40 backdrop-blur-xl flex justify-between items-center px-8 py-3 z-50 shadow-[0_20px_40px_rgba(0,0,0,0.4),0_0_20px_rgba(133,173,255,0.05)] font-['Space_Grotesk'] tracking-tight">
+    <div class="text-xl font-bold tracking-tighter text-white uppercase" id="nav-name">Haydra Ali</div>
+    <div class="hidden md:flex items-center gap-8">
+        <a class="text-blue-400 border-b-2 border-blue-400 pb-1" href="#hero">Hero</a>
+        <a class="text-slate-400 hover:text-white transition-colors" href="#expertise">Expertise</a>
+        <a class="text-slate-400 hover:text-white transition-colors" href="#skills">Skills</a>
+        <a class="text-slate-400 hover:text-white transition-colors" href="#projects">Projects</a>
+        <a class="text-slate-400 hover:text-white transition-colors" href="#contact">Contact</a>
     </div>
-
-    <!-- Tab Panels -->
-    <div class="tab-content">
-      <!-- Backend Panel -->
-      <div class="tab-pane active" id="backend">
-        <h2 class="section-title"><i class="fas fa-server"></i> Backend Engineering & APIs</h2>
-        <div class="projects-grid" id="backendProjects"></div>
-      </div>
-
-      <!-- Frontend Panel -->
-      <div class="tab-pane" id="frontend">
-        <h2 class="section-title"><i class="fas fa-laptop-code"></i> Frontend & UI Craftsmanship</h2>
-        <div class="projects-grid" id="frontendProjects"></div>
-      </div>
-
-      <!-- DevOps Panel -->
-      <div class="tab-pane" id="devops">
-        <h2 class="section-title"><i class="fas fa-cloud-upload-alt"></i> DevOps & Infrastructure</h2>
-        <div class="projects-grid" id="devopsProjects"></div>
-      </div>
-
-      <!-- Full Stack Panel -->
-      <div class="tab-pane" id="fullstack">
-        <h2 class="section-title"><i class="fas fa-layer-group"></i> Full Stack Applications</h2>
-        <div class="projects-grid" id="fullstackProjects"></div>
-      </div>
-
-      <!-- About Panel -->
-      <div class="tab-pane" id="about">
-        <div class="about-grid">
-          <div class="about-text">
-            <h3><i class="fas fa-user-astronaut"></i> Profile Summary</h3>
-            <p>Highly skilled IT Engineer with proven experience in full-stack development, specializing in Laravel, backend systems, and AI integration. Demonstrated ability to design scalable applications, lead dev teams, and streamline IT operations with a DevOps mindset. Proficient in RESTful APIs, monolithic apps, database optimization, and CI/CD pipelines (Docker + GitHub Actions).</p>
-            <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-            <p><strong>Damascus University</strong> — Information Technology Engineering (2022–Present)<br>4th year, specializing in Network Engineering, DevOps, Backend & System Administration.</p>
-            <h3><i class="fas fa-language"></i> Languages</h3>
-            <p>Arabic (Native) | English (Professional working proficiency)</p>
-          </div>
-          <div class="skills-section">
-            <h3><i class="fas fa-chart-line"></i> Core Proficiency</h3>
-            <div class="skill-item">
-              <span>PHP / Laravel</span>
-              <div class="progress-bar"><div class="progress" style="width: 92%"></div></div>
-            </div>
-            <div class="skill-item">
-              <span>JavaScript / TypeScript</span>
-              <div class="progress-bar"><div class="progress" style="width: 88%"></div></div>
-            </div>
-            <div class="skill-item">
-              <span>Go (Golang)</span>
-              <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
-            </div>
-            <div class="skill-item">
-              <span>.NET / C#</span>
-              <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
-            </div>
-            <div class="skill-item">
-              <span>Java / Spring Boot</span>
-              <div class="progress-bar"><div class="progress" style="width: 78%"></div></div>
-            </div>
-            <div class="skill-item">
-              <span>Docker / CI/CD</span>
-              <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
-            </div>
-            <div class="skill-item">
-              <span>Databases (MySQL, PG, SQL Server)</span>
-              <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Contact Panel -->
-      <div class="tab-pane" id="contact">
-        <div class="contact-wrapper">
-          <div class="contact-info">
-            <h3><i class="fas fa-paper-plane"></i> Let's Connect</h3>
-            <p>Open for backend leadership roles, full-stack contracts, or innovative AI-integrated projects.</p>
-            <ul class="contact-details">
-              <li><i class="fas fa-envelope"></i> haydraalio000@gmail.com</li>
-              <li><i class="fab fa-github"></i> github.com/Grombrindle</li>
-              <li><i class="fab fa-linkedin"></i> linkedin.com/in/haydra-ali</li>
-              <li><i class="fas fa-map-marker-alt"></i> Remote / Damascus, Syria</li>
-            </ul>
-          </div>
-          <form id="contactForm" class="contact-form">
-            <h3>Send a Message</h3>
-            <input type="text" id="name" placeholder="Your name" required>
-            <input type="email" id="email" placeholder="Email address" required>
-            <textarea rows="5" id="message" placeholder="Project idea / opportunity ..." required></textarea>
-            <button type="submit" class="btn-primary"><i class="fas fa-location-arrow"></i> Reach out</button>
-            <p class="form-note">* demo form — opens your mail client</p>
-          </form>
-        </div>
-      </div>
+    <div class="flex items-center gap-4">
+        <button class="material-symbols-outlined text-blue-400 hover:scale-105 transition-transform" id="darkModeToggle">dark_mode</button>
+        <button class="md:hidden material-symbols-outlined text-blue-400">menu</button>
     </div>
+    <div class="absolute bottom-0 left-0 h-[2px] bg-tertiary rounded-full transition-all duration-75" id="scroll-progress" style="width: 0%"></div>
+</nav>
 
-    <footer>
-      <p>© 2026 Haydra Ali — Built with <i class="fas fa-code"></i> & modern workflows. Deployed on GitHub Pages.</p>
-    </footer>
-  </div>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-surface" id="hero">
+    <div class="absolute inset-0 z-0 opacity-20 overflow-hidden">
+        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary rounded-full blur-[120px] animate-pulse"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-secondary rounded-full blur-[120px] animate-pulse" style="animation-delay: 2s"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-8 text-center">
+        <span class="font-label text-secondary tracking-widest uppercase text-sm mb-4 block" id="hero-title">Information Technology Engineer</span>
+        <h1 class="font-headline text-5xl md:text-8xl font-extrabold text-white tracking-tighter mb-6 glitch" data-text="" id="hero-name">HAYDRA ALI</h1>
+        <div class="text-2xl md:text-3xl font-label text-primary-dim h-12 mb-12">
+            <span id="typed"></span>
+        </div>
+        <div class="flex justify-center gap-6 mb-12">
+            <a class="w-12 h-12 glass-card rounded-full flex items-center justify-center text-white hover:scale-110 active:scale-95 duration-200" href="#" id="github-icon" target="_blank">
+                <i class="fab fa-github text-xl"></i>
+            </a>
+            <a class="w-12 h-12 glass-card rounded-full flex items-center justify-center text-white hover:scale-110 active:scale-95 duration-200" href="#" id="linkedin-icon" target="_blank">
+                <i class="fab fa-linkedin-in text-xl"></i>
+            </a>
+            <a class="w-12 h-12 glass-card rounded-full flex items-center justify-center text-white hover:scale-110 active:scale-95 duration-200" href="#" id="terminal-icon" target="_blank">
+                <span class="material-symbols-outlined">terminal</span>
+            </a>
+        </div>
+        <div class="flex flex-col md:flex-row justify-center gap-4">
+            <a href="#projects" class="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-on-primary-fixed font-bold rounded-md hover:scale-105 transition-transform duration-200 shadow-lg">
+                View Projects
+            </a>
+            <a href="#contact" class="px-8 py-4 glass-card text-white font-bold rounded-md hover:scale-105 transition-transform duration-200">
+                Get In Touch
+            </a>
+        </div>
+    </div>
+</section>
 
-  <script src="js/script.js"></script>
+<!-- Expertise Section -->
+<section class="py-24 bg-surface-container-low relative" id="expertise">
+    <div class="max-w-7xl mx-auto px-8">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-4">
+            <div class="max-w-2xl">
+                <h2 class="font-headline text-4xl font-bold text-white mb-6">Core Expertise</h2>
+                <p class="text-on-surface-variant text-lg leading-relaxed" id="expertise-desc">Full‑stack development, backend architecture, DevOps automation, and AI integration – delivering robust, scalable solutions.</p>
+            </div>
+            <div class="text-tertiary-dim font-label text-sm uppercase tracking-widest pb-2 border-b border-tertiary-dim">01 / Specialties</div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1: Backend Engineering -->
+            <div class="glass-card p-10 rounded-xl group">
+                <span class="material-symbols-outlined text-4xl text-primary mb-8 block" style="font-variation-settings: 'FILL' 1;">architecture</span>
+                <h3 class="font-headline text-2xl font-bold text-white mb-4">Backend Engineering</h3>
+                <p class="text-on-surface-variant leading-relaxed mb-6">Building high‑performance RESTful APIs and monolithic applications with modern frameworks.</p>
+                <ul class="space-y-2 text-sm font-label text-primary-dim" id="backend-list">
+                    <!-- dynamically filled -->
+                </ul>
+            </div>
+            <!-- Card 2: DevOps & Automation -->
+            <div class="glass-card p-10 rounded-xl group">
+                <span class="material-symbols-outlined text-4xl text-secondary mb-8 block" style="font-variation-settings: 'FILL' 1;">cloud</span>
+                <h3 class="font-headline text-2xl font-bold text-white mb-4">DevOps & Automation</h3>
+                <p class="text-on-surface-variant leading-relaxed mb-6">CI/CD pipelines with GitHub Actions, Docker, server administration, and automated deployment workflows.</p>
+                <ul class="space-y-2 text-sm font-label text-secondary" id="devops-list">
+                    <!-- dynamic -->
+                </ul>
+            </div>
+            <!-- Card 3: AI Integration -->
+            <div class="glass-card p-10 rounded-xl group">
+                <span class="material-symbols-outlined text-4xl text-tertiary mb-8 block" style="font-variation-settings: 'FILL' 1;">neurology</span>
+                <h3 class="font-headline text-2xl font-bold text-white mb-4">AI Integration</h3>
+                <p class="text-on-surface-variant leading-relaxed mb-6">Leveraging prompt engineering and AI models to automate tasks and enhance application intelligence.</p>
+                <ul class="space-y-2 text-sm font-label text-tertiary-dim" id="ai-list">
+                    <!-- dynamic -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section (unchanged) -->
+<section class="py-24 bg-surface relative overflow-hidden" id="skills">
+    <div class="max-w-7xl mx-auto px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div>
+                <h2 class="font-headline text-4xl font-bold text-white mb-10">Technical Proficiency</h2>
+                <div class="space-y-12" id="skill-bars"></div>
+            </div>
+            <div class="glass-card p-12 rounded-2xl" id="tech-stack-cloud"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Projects Section -->
+<section class="py-24 bg-surface-container-low" id="projects">
+    <div class="max-w-7xl mx-auto px-8">
+        <h2 class="font-headline text-4xl font-bold text-white mb-16 text-center">Featured Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="featured-projects-grid"></div>
+    </div>
+</section>
+
+<!-- More Projects Slider -->
+<section class="py-24 bg-surface" id="more-projects">
+    <div class="max-w-7xl mx-auto px-8">
+        <h2 class="font-headline text-4xl font-bold text-white mb-6 text-center">Other Notable Works</h2>
+        <p class="text-on-surface-variant text-center max-w-2xl mx-auto mb-12">A collection of additional projects, experiments, and tools I've built.</p>
+
+        <div class="relative">
+            <div class="overflow-hidden rounded-2xl" id="slider-wrapper">
+                <div class="flex gap-6 transition-transform duration-300 ease-out" id="slider-track"></div>
+            </div>
+            <button class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 w-12 h-12 glass-card rounded-full flex items-center justify-center text-white hover:scale-110 transition-all z-10" id="slider-prev">
+                <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+            <button class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 w-12 h-12 glass-card rounded-full flex items-center justify-center text-white hover:scale-110 transition-all z-10" id="slider-next">
+                <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+            <div class="flex justify-center gap-2 mt-8" id="slider-dots"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section (no form, only links) -->
+<section class="py-24 bg-surface-container-low" id="contact">
+    <div class="max-w-7xl mx-auto px-8">
+        <div class="glass-card p-12 rounded-2xl max-w-3xl mx-auto text-center">
+            <h2 class="font-headline text-4xl font-bold text-white mb-6">Let's Connect</h2>
+            <p class="text-on-surface-variant mb-10" id="contact-message">Open for backend leadership, full‑stack contracts, or innovative AI‑powered projects.</p>
+            <div class="flex flex-wrap justify-center gap-8" id="contact-links">
+                <!-- dynamic from config -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-[#060e20] w-full border-t border-white/5 py-12">
+    <div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 gap-6 font-['Space_Grotesk'] text-sm tracking-wide">
+        <div class="text-lg font-black text-white" id="footer-name">HAYDRA ALI</div>
+        <div class="flex gap-8" id="footer-links"></div>
+        <div class="text-slate-500" id="copyright"></div>
+    </div>
+</footer>
+
+<!-- Back to top button -->
+<button class="fixed bottom-8 right-8 w-12 h-12 glass-card rounded-full flex items-center justify-center text-white opacity-0 transition-opacity duration-300 z-50" id="back-to-top">
+    <span class="material-symbols-outlined">arrow_upward</span>
+</button>
+
+<script src="js/config.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
