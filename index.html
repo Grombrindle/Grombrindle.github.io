@@ -1,261 +1,1511 @@
-<!DOCTYPE html>
-<html class="dark" lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haydra Ali | IT Engineer & Full‑Stack Developer</title>
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Icons: Material Symbols + Font Awesome for brand icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "surface-container-lowest": "#000000",
-                        "on-surface": "#dee5ff",
-                        "tertiary-fixed": "#00f1fe",
-                        "surface-container-highest": "#192540",
-                        "on-secondary-fixed-variant": "#7511c3",
-                        "surface": "#060e20",
-                        "surface-container": "#0f1930",
-                        "on-surface-variant": "#a3aac4",
-                        "surface-dim": "#060e20",
-                        "on-secondary-container": "#e9cdff",
-                        "outline-variant": "#40485d",
-                        "tertiary-container": "#00f1fe",
-                        "on-primary-container": "#002150",
-                        "on-secondary": "#33005b",
-                        "on-error": "#490006",
-                        "surface-variant": "#192540",
-                        "on-tertiary-fixed-variant": "#006065",
-                        "primary-fixed": "#6e9fff",
-                        "inverse-primary": "#005bc4",
-                        "on-background": "#dee5ff",
-                        "on-primary-fixed": "#000000",
-                        "inverse-surface": "#faf8ff",
-                        "surface-container-low": "#091328",
-                        "primary": "#85adff",
-                        "on-secondary-fixed": "#4f0089",
-                        "tertiary-dim": "#00e2ee",
-                        "secondary-container": "#6f00be",
-                        "secondary-fixed": "#e5c6ff",
-                        "on-primary": "#002c66",
-                        "tertiary-fixed-dim": "#00e2ee",
-                        "surface-container-high": "#141f38",
-                        "primary-dim": "#699cff",
-                        "primary-fixed-dim": "#5391ff",
-                        "outline": "#6d758c",
-                        "secondary-fixed-dim": "#dbb4ff",
-                        "tertiary": "#99f7ff",
-                        "surface-bright": "#1f2b49",
-                        "surface-tint": "#85adff",
-                        "secondary-dim": "#9c48ea",
-                        "background": "#060e20",
-                        "on-tertiary": "#005f64",
-                        "error": "#ff716c",
-                        "on-primary-fixed-variant": "#002a62",
-                        "inverse-on-surface": "#4d556b",
-                        "on-error-container": "#ffa8a3",
-                        "primary-container": "#6e9fff",
-                        "error-dim": "#d7383b",
-                        "secondary": "#c180ff",
-                        "error-container": "#9f0519",
-                        "on-tertiary-container": "#00555a"
-                    },
-                    fontFamily: {
-                        "headline": ["Space Grotesk"],
-                        "body": ["Inter"],
-                        "label": ["Space Grotesk"]
-                    },
-                    borderRadius: {
-                        DEFAULT: "0.25rem",
-                        lg: "0.5rem",
-                        xl: "0.75rem",
-                        full: "9999px"
-                    }
+
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <style>
+                body {
+                  background-color: white; /* Ensure the iframe has a white background */
                 }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="css/style.css">
+
+                /* style.css — Haydra Ali · Portfolio */
+
+/* ================= TOKENS ================= */
+:root {
+  --font-d: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-b: "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-m: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --bg: #070b10;
+  --bg2: #0a1017;
+  --panel: #0d141d;
+  --panel2: #101823;
+  --line: rgba(148, 168, 190, 0.14);
+  --line-strong: rgba(148, 168, 190, 0.28);
+  --text: #e8eff6;
+  --muted: #94a5b7;
+  --faint: #63758a;
+  --acc: #43e6a0;
+  --acc-ink: #04170e;
+  --acc-soft: rgba(67, 230, 160, 0.12);
+  --amber: #f0b465;
+  --glow: rgba(67, 230, 160, 0.16);
+  --shadow: 0 18px 50px -18px rgba(0, 0, 0, 0.65);
+  --noise-op: 0.05;
+}
+
+[data-theme="light"] {
+  --bg: #f3f5f4;
+  --bg2: #ecefeb;
+  --panel: #ffffff;
+  --panel2: #f7f9f8;
+  --line: rgba(15, 26, 36, 0.12);
+  --line-strong: rgba(15, 26, 36, 0.26);
+  --text: #0d161e;
+  --muted: #4d5f6f;
+  --faint: #75879a;
+  --acc: #0c8a5f;
+  --acc-ink: #f3fffa;
+  --acc-soft: rgba(12, 138, 95, 0.1);
+  --amber: #b45309;
+  --glow: rgba(12, 138, 95, 0.12);
+  --shadow: 0 18px 44px -20px rgba(15, 26, 36, 0.28);
+  --noise-op: 0.035;
+}
+
+/* ================= RESET / BASE ================= */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-b);
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
+::selection { background: var(--acc); color: var(--acc-ink); }
+:focus-visible { outline: 2px solid var(--acc); outline-offset: 3px; border-radius: 4px; }
+
+/* film-grain noise overlay */
+body::after {
+  content: "";
+  position: fixed; inset: 0;
+  pointer-events: none; z-index: 2000;
+  opacity: var(--noise-op);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+
+.container { width: min(1180px, 92vw); margin-inline: auto; }
+.mono { font-family: var(--font-m); }
+.acc { color: var(--acc); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+section[id] { scroll-margin-top: 86px; }
+
+.skip-link {
+  position: fixed; top: -60px; left: 16px; z-index: 3000;
+  background: var(--acc); color: var(--acc-ink);
+  padding: 10px 18px; border-radius: 8px; font-weight: 600;
+  transition: top 0.25s ease;
+}
+.skip-link:focus { top: 12px; }
+
+/* progress bar */
+.progress {
+  position: fixed; top: 0; left: 0; height: 2px; width: 0%;
+  background: linear-gradient(90deg, var(--acc), var(--amber));
+  z-index: 1200;
+}
+
+/* ================= TYPO HELPERS ================= */
+.kicker {
+  font-family: var(--font-m);
+  font-size: 0.78rem; letter-spacing: 0.14em; text-transform: lowercase;
+  color: var(--acc);
+  display: inline-flex; align-items: center; gap: 10px;
+}
+.pulse-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--acc);
+  box-shadow: 0 0 0 0 var(--glow);
+  animation: pulse 2.2s ease-out infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 var(--glow); }
+  70% { box-shadow: 0 0 0 12px rgba(0,0,0,0); }
+  100% { box-shadow: 0 0 0 0 rgba(0,0,0,0); }
+}
+
+.sec-head { margin-bottom: clamp(2.2rem, 5vw, 3.6rem); max-width: 760px; }
+.sec-head .kicker { margin-bottom: 14px; }
+.sec-title {
+  font-family: var(--font-d);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4.2vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+.sec-sub { margin-top: 14px; color: var(--muted); font-size: 1.05rem; max-width: 60ch; }
+
+/* line-mask reveal */
+.lm { display: block; overflow: hidden; padding-bottom: 0.08em; }
+.lm-i { display: block; transform: translateY(115%); transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.in-view .lm-i, html:not(.js) .lm-i { transform: none; }
+
+/* scroll reveal */
+.js [data-reveal] { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.js [data-reveal].in-view { opacity: 1; transform: none; }
+
+/* ================= BUTTONS ================= */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--font-m); font-size: 0.86rem; font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 13px 24px; border-radius: 10px;
+  border: 1px solid transparent;
+  transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+.btn svg { width: 15px; height: 15px; transition: transform 0.25s ease; }
+.btn:hover svg { transform: translate(2px, -2px); }
+.btn-solid { background: var(--acc); color: var(--acc-ink); font-weight: 700; }
+.btn-solid:hover { transform: translateY(-2px); box-shadow: 0 12px 28px -10px var(--glow), 0 0 0 1px var(--acc); }
+.btn-ghost { border-color: var(--line-strong); color: var(--text); }
+.btn-ghost:hover { border-color: var(--acc); color: var(--acc); transform: translateY(-2px); }
+
+/* ================= HEADER ================= */
+.site-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1100;
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.35s ease, border-color 0.35s ease, backdrop-filter 0.35s ease;
+}
+.site-header.scrolled {
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom-color: var(--line);
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 68px; }
+
+.brand { display: inline-flex; align-items: center; gap: 10px; }
+.brand-glyph { width: 30px; height: 30px; fill: var(--panel2); stroke: var(--acc); stroke-width: 4; }
+.brand-glyph rect { stroke: none; fill: var(--panel2); box-shadow: inset 0 0 0 1px var(--line); }
+.brand-glyph path { stroke: var(--acc); fill: none; }
+.brand-glyph { border-radius: 8px; overflow: hidden; outline: 1px solid var(--line); }
+.brand-text { font-size: 0.95rem; font-weight: 500; letter-spacing: 0.02em; }
+
+.site-nav ul { display: flex; align-items: center; gap: 6px; }
+.site-nav a {
+  font-family: var(--font-m); font-size: 0.82rem; letter-spacing: 0.05em;
+  color: var(--muted);
+  padding: 8px 13px; border-radius: 8px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+.site-nav a:hover { color: var(--text); background: var(--acc-soft); }
+.site-nav a[aria-current="true"] { color: var(--acc); }
+.site-nav a.nav-cta { color: var(--acc); border: 1px solid var(--line-strong); margin-left: 6px; }
+.site-nav a.nav-cta:hover { border-color: var(--acc); }
+
+.header-actions { display: flex; align-items: center; gap: 8px; }
+.icon-btn {
+  width: 38px; height: 38px; display: grid; place-items: center;
+  border: 1px solid var(--line); border-radius: 10px; color: var(--muted);
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.icon-btn:hover { color: var(--acc); border-color: var(--acc); transform: translateY(-1px); }
+.icon-btn svg { width: 17px; height: 17px; fill: currentColor; }
+.icon-btn svg[fill="none"], .icon-btn svg path[fill="none"] { fill: none; }
+#themeToggle svg { fill: none; stroke: currentColor; }
+[data-theme="dark"] .icon-sun { display: none; }
+[data-theme="light"] .icon-moon { display: none; }
+
+.nav-toggle { display: none; width: 40px; height: 40px; flex-direction: column; justify-content: center; align-items: center; gap: 5px; border: 1px solid var(--line); border-radius: 10px; }
+.nav-toggle span { display: block; width: 18px; height: 2px; background: var(--text); border-radius: 2px; transition: transform 0.3s ease, opacity 0.3s ease; }
+.nav-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ================= HERO ================= */
+.hero { position: relative; padding: clamp(8.5rem, 16vh, 11rem) 0 clamp(3.5rem, 7vw, 6rem); }
+.hero::before {
+  content: "";
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(720px 420px at 82% 6%, var(--glow), transparent 70%),
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 100% 100%, 56px 56px, 56px 56px;
+  opacity: 0.55;
+  -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent);
+  mask-image: linear-gradient(to bottom, black 55%, transparent);
+}
+.hero-grid { position: relative; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+
+.hero-name {
+  font-family: var(--font-d); font-weight: 700;
+  font-size: clamp(2.9rem, 8.2vw, 5.6rem);
+  line-height: 0.98; letter-spacing: -0.03em;
+  margin: 18px 0 14px;
+  min-height: 1em;
+}
+.hero-role {
+  font-family: var(--font-m); font-size: clamp(0.85rem, 1.6vw, 1.05rem);
+  color: var(--acc); letter-spacing: 0.03em; margin-bottom: 20px;
+}
+.hero-role .sep { color: var(--faint); margin: 0 6px; }
+.hero-lede { color: var(--muted); font-size: clamp(1rem, 1.6vw, 1.15rem); max-width: 54ch; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+.hero-links { display: flex; gap: 10px; margin-top: 26px; }
+.hero-links a {
+  width: 42px; height: 42px; display: grid; place-items: center;
+  border: 1px solid var(--line); border-radius: 10px; color: var(--muted);
+  transition: all 0.25s ease;
+}
+.hero-links a:hover { color: var(--acc); border-color: var(--acc); transform: translateY(-3px); }
+.hero-links svg { width: 18px; height: 18px; fill: currentColor; }
+.hero-links svg path[fill="none"], .hero-links svg circle, .hero-links svg rect, .hero-links svg path[stroke] { fill: none; }
+.hero-now { margin-top: 26px; font-size: 0.76rem; color: var(--faint); letter-spacing: 0.03em; }
+
+/* console card (always dark — terminal aesthetic) */
+.console-card {
+  background: #0a0f15;
+  border: 1px solid rgba(148, 168, 190, 0.2);
+  border-radius: 14px;
+  box-shadow: var(--shadow), 0 0 60px -20px var(--glow);
+  overflow: hidden;
+}
+.console-bar { display: flex; align-items: center; gap: 7px; padding: 12px 16px; border-bottom: 1px solid rgba(148, 168, 190, 0.14); background: rgba(255,255,255,0.02); }
+.console-bar .dot { width: 11px; height: 11px; border-radius: 50%; }
+.dot.r { background: #ff5f57; } .dot.y { background: #febc2e; } .dot.g { background: #28c840; }
+.console-title { margin-left: auto; font-size: 0.72rem; color: #7c8ea2; letter-spacing: 0.04em; }
+.console-body { padding: 20px 18px; min-height: 218px; font-size: 0.83rem; line-height: 1.9; color: #c7d4e0; }
+.console-body .tl { white-space: pre-wrap; word-break: break-word; }
+.console-body .tp { color: #43e6a0; margin-right: 8px; }
+.console-body .out { color: #93a5b7; }
+.console-body .out.ok { color: #43e6a0; }
+.console-body .caret { display: inline-block; width: 8px; height: 1.05em; background: #43e6a0; vertical-align: text-bottom; margin-left: 2px; animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.console-status { display: flex; flex-wrap: wrap; gap: 8px 16px; padding: 12px 18px; border-top: 1px dashed rgba(148, 168, 190, 0.2); font-size: 0.68rem; color: #7c8ea2; }
+.console-status .node { display: inline-flex; align-items: center; gap: 7px; }
+.console-status .dim { color: #5c6d80; }
+.led { width: 7px; height: 7px; border-radius: 50%; background: #43e6a0; box-shadow: 0 0 8px rgba(67,230,160,0.9); animation: led 2.6s ease-in-out infinite; }
+.console-status .node:nth-child(2) .led { animation-delay: 0.7s; }
+.console-status .node:nth-child(3) .led { animation-delay: 1.4s; }
+@keyframes led { 0%, 100% { opacity: 1; } 50% { opacity: 0.45; } }
+
+/* ================= TICKER ================= */
+.ticker { border-block: 1px solid var(--line); overflow: hidden; background: var(--bg2); }
+.ticker-track { display: flex; width: max-content; animation: ticker 36s linear infinite; }
+.ticker:hover .ticker-track { animation-play-state: paused; }
+.ticker-track span { padding: 13px 0; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--faint); white-space: nowrap; }
+@keyframes ticker { to { transform: translateX(-50%); } }
+
+/* ================= SECTIONS ================= */
+.section { padding-block: clamp(4.2rem, 9vw, 7.5rem); }
+.section-alt { background: var(--bg2); border-block: 1px solid var(--line); }
+
+/* overview */
+.ov-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+.ov-statement {
+  font-family: var(--font-d); font-weight: 500;
+  font-size: clamp(1.35rem, 2.6vw, 1.9rem); line-height: 1.35; letter-spacing: -0.01em;
+  border-left: 3px solid var(--acc); padding-left: 24px;
+}
+.ov-body p { color: var(--muted); margin-bottom: 16px; }
+.ov-body strong { color: var(--text); font-weight: 600; }
+.ov-facts { margin-top: 26px; border-top: 1px solid var(--line); }
+.ov-facts li { display: flex; gap: 18px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 0.8rem; color: var(--muted); }
+.ov-facts li span:first-child { color: var(--acc); min-width: 78px; text-transform: lowercase; }
+
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; margin-top: clamp(2.5rem, 6vw, 4.5rem); }
+.stat { background: var(--panel); padding: 28px 26px; transition: background-color 0.3s ease; }
+.stat:hover { background: var(--panel2); }
+.stat-n { display: block; font-family: var(--font-d); font-size: clamp(1.9rem, 3.4vw, 2.7rem); font-weight: 700; color: var(--acc); line-height: 1; margin-bottom: 10px; }
+.stat-n b { font-weight: inherit; }
+.stat-l { font-size: 0.83rem; color: var(--muted); line-height: 1.5; }
+
+/* skills */
+.skill-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.skill-card {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+  padding: 24px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.skill-card:hover { transform: translateY(-4px); border-color: var(--acc); box-shadow: var(--shadow); }
+.skill-card h3 { font-size: 0.82rem; letter-spacing: 0.08em; color: var(--text); margin-bottom: 16px; display: flex; align-items: baseline; gap: 10px; }
+.skill-card .idx { color: var(--acc); font-size: 0.72rem; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips li {
+  font-family: var(--font-m); font-size: 0.72rem; letter-spacing: 0.02em;
+  padding: 6px 12px; border: 1px solid var(--line-strong); border-radius: 999px;
+  color: var(--muted);
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+}
+.chips li:hover { border-color: var(--acc); color: var(--acc); transform: translateY(-2px); background: var(--acc-soft); }
+.chips-soft li { border-style: dashed; }
+.pro-skills { margin-top: 26px; background: var(--panel); border: 1px dashed var(--line-strong); border-radius: 14px; padding: 24px; }
+.pro-skills h3 { font-size: 0.78rem; letter-spacing: 0.1em; color: var(--acc); margin-bottom: 16px; }
+
+/* experience */
+.exp-grid { display: grid; grid-template-columns: minmax(250px, 340px) 1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+.exp-aside-inner { position: sticky; top: 96px; }
+.exp-aside .kicker { margin-bottom: 14px; }
+.exp-aside .sec-sub { font-size: 0.98rem; }
+.exp-index { margin-top: 28px; border-top: 1px solid var(--line); }
+.exp-index li { padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 0.78rem; color: var(--faint); }
+.exp-index li::before { content: "▸ "; color: var(--acc); }
+
+.xp-wrap { position: relative; padding-left: 30px; display: flex; flex-direction: column; gap: 22px; }
+.xp-wrap::before { content: ""; position: absolute; left: 5px; top: 10px; bottom: 10px; width: 1px; background: linear-gradient(var(--acc), var(--line) 30%, var(--line)); }
+.xp {
+  position: relative;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+  padding: 26px 28px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.xp:hover { transform: translateX(6px); border-color: var(--line-strong); box-shadow: var(--shadow); }
+.xp::before { content: ""; position: absolute; left: -29px; top: 34px; width: 11px; height: 11px; border-radius: 50%; background: var(--bg); border: 2px solid var(--acc); }
+.xp-head { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; flex-wrap: wrap; margin-bottom: 14px; }
+.xp-role { font-family: var(--font-d); font-size: 1.22rem; font-weight: 700; letter-spacing: -0.01em; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.xp-intern { font-size: 0.62rem; padding: 3px 9px; border: 1px solid var(--amber); color: var(--amber); border-radius: 999px; letter-spacing: 0.08em; }
+.xp-org { font-size: 0.92rem; color: var(--acc); margin-top: 3px; }
+.xp-mode { color: var(--faint); }
+.xp-when { font-size: 0.72rem; color: var(--faint); letter-spacing: 0.03em; padding-top: 6px; }
+.xp-points li { position: relative; padding-left: 20px; color: var(--muted); font-size: 0.94rem; margin-bottom: 9px; }
+.xp-points li::before { content: "—"; position: absolute; left: 0; color: var(--acc); }
+.xp-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.xp-tags li { font-size: 0.66rem; letter-spacing: 0.06em; padding: 4px 10px; border-radius: 6px; background: var(--acc-soft); color: var(--acc); border: 1px solid transparent; }
+
+/* infrastructure */
+.infra-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.infra-card {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+  padding: 28px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.infra-card:hover { transform: translateY(-4px); border-color: var(--acc); box-shadow: var(--shadow); }
+.infra-ico { width: 46px; height: 46px; display: grid; place-items: center; border: 1px solid var(--line-strong); border-radius: 11px; color: var(--acc); margin-bottom: 18px; background: var(--acc-soft); }
+.infra-ico svg { width: 24px; height: 24px; }
+.infra-card h3 { font-family: var(--font-d); font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; }
+.infra-card p { color: var(--muted); font-size: 0.93rem; margin-bottom: 16px; }
+
+.pipeline, .cluster { margin-top: 26px; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 26px; overflow-x: auto; }
+.pipeline svg, .cluster svg { width: 100%; min-width: 640px; height: auto; }
+.pipeline figcaption, .cluster figcaption { margin-top: 12px; font-size: 0.7rem; color: var(--faint); letter-spacing: 0.05em; }
+.pipeline .stage rect, .cluster .cnode rect { fill: var(--panel2); stroke: var(--line-strong); stroke-width: 1.5; transition: stroke 0.3s ease; }
+.pipeline:hover .stage rect, .cluster:hover .cnode rect { stroke: var(--acc); }
+.pipeline .stage-ok rect { stroke: var(--acc); fill: var(--acc-soft); }
+.pipeline text { font-family: var(--font-m); font-size: 14px; fill: var(--text); text-anchor: middle; }
+.cluster text { text-anchor: middle; }
+.cluster .cn-t { font-family: var(--font-m); font-size: 14px; fill: var(--acc); }
+.cluster .cn-s { font-family: var(--font-m); font-size: 10.5px; fill: var(--muted); }
+.flow-line { stroke: var(--acc); stroke-width: 1.6; stroke-dasharray: 5 8; animation: flow 1.3s linear infinite; opacity: 0.8; }
+@keyframes flow { to { stroke-dashoffset: -13; } }
+.cled { fill: var(--acc); animation: led 2.4s ease-in-out infinite; }
+
+/* projects */
+.proj-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.proj {
+  display: flex; flex-direction: column;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 16px; overflow: hidden;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+.proj:hover { transform: translateY(-6px); border-color: var(--acc); box-shadow: var(--shadow); }
+.proj-media { background: var(--panel2); border-bottom: 1px solid var(--line); overflow: hidden; }
+.proj-media svg { width: 100%; height: auto; aspect-ratio: 400 / 225; transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.proj:hover .proj-media svg { transform: scale(1.045); }
+.proj-media svg * { fill: var(--acc-soft); stroke: var(--acc); stroke-width: 2.5; }
+.proj-media svg .alt { fill: transparent; stroke: var(--faint); stroke-width: 2; }
+.proj-media svg .accfill { fill: var(--acc); stroke: none; opacity: 0.9; }
+.proj-media svg .core { fill: var(--bg); stroke: none; }
+.proj-media svg .dash { stroke-dasharray: 6 7; stroke: var(--amber); fill: none; }
+.proj-body { padding: 26px 28px 28px; display: flex; flex-direction: column; flex: 1; }
+.proj-meta { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--acc); margin-bottom: 10px; }
+.proj-body h3 { font-family: var(--font-d); font-size: 1.5rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 10px; }
+.proj-body > p { color: var(--muted); font-size: 0.93rem; margin-bottom: 16px; }
+.proj-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: auto; padding-top: 18px; align-items: center; }
+.plink { font-size: 0.76rem; color: var(--text); border-bottom: 1px solid var(--line-strong); padding-bottom: 2px; transition: color 0.2s ease, border-color 0.2s ease; }
+.plink:hover { color: var(--acc); border-color: var(--acc); }
+.pbadge { font-size: 0.72rem; color: var(--amber); display: inline-flex; align-items: center; gap: 6px; }
+.proj-wide { grid-column: 1 / -1; display: grid; grid-template-columns: 1.05fr 1fr; }
+.proj-wide .proj-media { border-bottom: none; border-right: 1px solid var(--line); display: flex; align-items: center; }
+.proj-wide .proj-media svg { aspect-ratio: auto; height: 100%; }
+
+.more-title { margin: clamp(2.5rem, 6vw, 4rem) 0 20px; font-size: 0.8rem; letter-spacing: 0.12em; color: var(--faint); }
+.more-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+.more-card {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 20px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.more-card:hover { transform: translateY(-4px); border-color: var(--acc); }
+.more-card h4 { font-family: var(--font-d); font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+.more-card p { color: var(--muted); font-size: 0.85rem; margin-bottom: 12px; }
+.more-card span { font-size: 0.66rem; color: var(--acc); letter-spacing: 0.05em; }
+
+/* workflow */
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; counter-reset: step; }
+.step { position: relative; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 26px 24px; transition: transform 0.3s ease, border-color 0.3s ease; }
+.step:hover { transform: translateY(-4px); border-color: var(--acc); }
+.step-n { display: inline-block; font-size: 0.78rem; color: var(--acc); border: 1px solid var(--acc); border-radius: 8px; padding: 4px 10px; margin-bottom: 16px; }
+.step h3 { font-family: var(--font-d); font-size: 1.12rem; font-weight: 700; margin-bottom: 8px; }
+.step p { color: var(--muted); font-size: 0.88rem; }
+
+/* education */
+.edu-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 18px; }
+.edu-card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 30px; }
+.edu-k { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--acc); margin-bottom: 12px; }
+.edu-card h3 { font-family: var(--font-d); font-size: 1.45rem; font-weight: 700; margin-bottom: 6px; }
+.edu-meta { font-size: 0.74rem; color: var(--faint); margin-bottom: 14px; }
+.edu-card > p { color: var(--muted); font-size: 0.93rem; }
+.lang-list { margin-bottom: 16px; display: flex; flex-direction: column; gap: 14px; }
+.lang-list li { display: grid; grid-template-columns: 78px 1fr auto; align-items: center; gap: 14px; font-size: 0.9rem; }
+.lang-list .mono { font-size: 0.7rem; color: var(--faint); }
+.lang-bar { height: 6px; border-radius: 99px; background: var(--line); overflow: hidden; }
+.lang-bar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--acc), var(--amber)); border-radius: 99px; transition: width 1.2s cubic-bezier(0.2, 0.7, 0.2, 1) 0.2s; }
+.in-view .lang-bar i { width: var(--w); }
+
+/* contact */
+.section-contact { position: relative; overflow: hidden; }
+.section-contact::before {
+  content: ""; position: absolute; inset: auto -10% -40% -10%; height: 80%;
+  background: radial-gradient(50% 60% at 50% 100%, var(--glow), transparent 70%);
+  pointer-events: none;
+}
+.contact-mail { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; margin-bottom: 34px; }
+.mail-big {
+  font-family: var(--font-d); font-weight: 700; letter-spacing: -0.01em;
+  font-size: clamp(1.25rem, 3.6vw, 2.3rem);
+  border-bottom: 2px solid var(--line-strong); padding-bottom: 4px;
+  transition: color 0.25s ease, border-color 0.25s ease;
+  overflow-wrap: anywhere;
+}
+.mail-big:hover { color: var(--acc); border-color: var(--acc); }
+.contact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; position: relative; }
+.c-card {
+  display: grid; grid-template-columns: auto 1fr auto; grid-template-rows: auto auto;
+  column-gap: 14px; align-items: center;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 13px; padding: 20px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.c-card:hover { transform: translateY(-4px); border-color: var(--acc); box-shadow: var(--shadow); }
+.c-card svg { grid-row: 1 / 3; width: 22px; height: 22px; fill: var(--acc); }
+.c-card svg path[fill="none"], .c-card svg circle, .c-card svg path[stroke] { fill: none; stroke: var(--acc); }
+.c-l { font-weight: 600; font-size: 0.92rem; }
+.c-v { grid-column: 2; font-size: 0.68rem; color: var(--faint); overflow-wrap: anywhere; }
+.c-a { grid-row: 1 / 3; grid-column: 3; color: var(--faint); transition: transform 0.25s ease, color 0.25s ease; }
+.c-card:hover .c-a { color: var(--acc); transform: translate(3px, -3px); }
+.contact-loc { margin-top: 30px; font-size: 0.74rem; color: var(--faint); letter-spacing: 0.04em; position: relative; }
+
+/* footer */
+.site-footer { border-top: 1px solid var(--line); background: var(--bg2); padding: 34px 0; }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+.f-brand p:first-child { font-size: 0.8rem; }
+.f-note { font-size: 0.76rem; color: var(--faint); margin-top: 4px; font-family: var(--font-b); }
+.f-nav { display: flex; gap: 20px; font-size: 0.74rem; }
+.f-nav a { color: var(--muted); transition: color 0.2s ease; }
+.f-nav a:hover { color: var(--acc); }
+
+/* to top */
+.to-top {
+  position: fixed; right: 22px; bottom: 22px; z-index: 1000;
+  width: 46px; height: 46px; display: grid; place-items: center;
+  background: var(--panel); color: var(--acc);
+  border: 1px solid var(--line-strong); border-radius: 12px;
+  opacity: 0; pointer-events: none; transform: translateY(12px);
+  transition: opacity 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+.to-top.show { opacity: 1; pointer-events: auto; transform: none; }
+.to-top:hover { border-color: var(--acc); }
+.to-top svg { width: 18px; height: 18px; }
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1020px) {
+  .skill-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .steps { grid-template-columns: repeat(2, 1fr); }
+  .contact-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-console { max-width: 640px; }
+}
+
+@media (max-width: 900px) {
+  .exp-grid { grid-template-columns: 1fr; }
+  .exp-aside-inner { position: static; }
+  .exp-index { display: none; }
+  .proj-wide { grid-template-columns: 1fr; }
+  .proj-wide .proj-media { border-right: none; border-bottom: 1px solid var(--line); }
+  .ov-grid, .edu-grid { grid-template-columns: 1fr; }
+
+  .nav-toggle { display: flex; }
+  .site-nav {
+    position: fixed; top: 68px; left: 0; right: 0; z-index: 1050;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    padding: 14px 4vw 22px;
+    opacity: 0; transform: translateY(-10px); pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .nav-open .site-nav { opacity: 1; transform: none; pointer-events: auto; }
+  .site-nav ul { flex-direction: column; align-items: stretch; gap: 4px; }
+  .site-nav a { display: block; padding: 13px 14px; font-size: 0.95rem; }
+  .site-nav a.nav-cta { margin-left: 0; text-align: center; margin-top: 8px; }
+  .header-gh { display: none; }
+}
+
+@media (max-width: 620px) {
+  .skill-grid, .infra-grid, .proj-grid, .steps, .contact-grid, .stats { grid-template-columns: 1fr; }
+  .hero { padding-top: 7.2rem; }
+  .console-body { min-height: 240px; font-size: 0.76rem; }
+  .xp { padding: 22px 20px; }
+  .proj-body { padding: 22px 20px 24px; }
+  .contact-mail { flex-direction: column; align-items: flex-start; }
+}
+
+/* ================= REDUCED MOTION ================= */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001s !important;
+  }
+  .ticker-track { animation: none; transform: none; }
+  .js [data-reveal] { opacity: 1; transform: none; }
+  .lm-i { transform: none; }
+  .lang-bar i { width: var(--w); transition: none; }
+}
+
+
+              </style>
+                        </head>
+                        <body>
+                            <!-- index.html -->
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haydra Ali — DevOps &amp; Systems Engineer · Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Haydra Ali — DevOps & Systems Engineer and Full-Stack Developer from Damascus, Syria. Scalable backends, modern frontends, CI/CD pipelines, AWS and GPU cluster infrastructure.">
+  <meta name="author" content="Haydra Ali">
+  <meta name="keywords" content="Haydra Ali, DevOps Engineer, Systems Engineer, Full-Stack Developer, Laravel, React, Next.js, AWS, Docker, CI/CD, Damascus">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://grombrindle.github.io/">
+  <meta name="theme-color" content="#070B10">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Haydra Ali — DevOps & Systems Engineer · Full-Stack Developer">
+  <meta property="og:description" content="I design scalable backends, build modern frontends, and run the pipelines and infrastructure that keep products reliable in production.">
+  <meta property="og:url" content="https://grombrindle.github.io/">
+  <meta property="og:image" content="og.svg">
+  <meta property="og:site_name" content="Haydra Ali — Portfolio">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Haydra Ali — DevOps & Systems Engineer · Full-Stack Developer">
+  <meta name="twitter:description" content="Scalable backends, modern frontends, CI/CD pipelines and production-grade infrastructure.">
+  <meta name="twitter:image" content="og.svg">
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070B10'/%3E%3Cpath d='M18 22l12 10-12 10' stroke='%2343E6A0' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M34 42h14' stroke='%2343E6A0' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <!-- Prevent theme flash -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("ha-theme");
+        if (!t) t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Fonts via Fontsource CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk/latin-500.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk/latin-700.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter/latin-400.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter/latin-500.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter/latin-600.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono/latin-400.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono/latin-500.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono/latin-700.css">
+
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-surface text-on-surface font-body overflow-x-hidden">
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress" id="progressBar" aria-hidden="true"></div>
 
-<!-- Custom Cursor Elements -->
-<div id="cursor-dot"></div>
-<div id="cursor-ring"></div>
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Haydra Ali — back to top">
+        <svg class="brand-glyph" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14"/><path d="M18 22l12 10-12 10" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 42h14" stroke-linecap="round"/></svg>
+        <span class="brand-text mono">haydra<span class="acc">.</span>ali</span>
+      </a>
 
-<!-- Navigation Shell -->
-<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] rounded-full border border-white/10 bg-[#0f1930]/40 backdrop-blur-xl flex justify-between items-center px-8 py-3 z-50 shadow-[0_20px_40px_rgba(0,0,0,0.4),0_0_20px_rgba(133,173,255,0.05)] font-['Space_Grotesk'] tracking-tight">
-    <div class="text-xl font-bold tracking-tighter text-white uppercase" id="nav-name">Haydra Ali</div>
-    <div class="hidden md:flex items-center gap-8">
-        <a class="text-blue-400 border-b-2 border-blue-400 pb-1" href="#hero">Hero</a>
-        <a class="text-slate-400 hover:text-white transition-colors" href="#expertise">Expertise</a>
-        <a class="text-slate-400 hover:text-white transition-colors" href="#skills">Skills</a>
-        <a class="text-slate-400 hover:text-white transition-colors" href="#projects">Projects</a>
-        <a class="text-slate-400 hover:text-white transition-colors" href="#contact">Contact</a>
-    </div>
-    <div class="flex items-center gap-4">
-        <button class="material-symbols-outlined text-blue-400 hover:scale-105 transition-transform" id="darkModeToggle">dark_mode</button>
-        <button class="md:hidden material-symbols-outlined text-blue-400">menu</button>
-    </div>
-    <div class="absolute bottom-0 left-0 h-[2px] bg-tertiary rounded-full transition-all duration-75" id="scroll-progress" style="width: 0%"></div>
-</nav>
+      <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#infrastructure">Infrastructure</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+      </nav>
 
-<!-- Hero Section -->
-<section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-surface" id="hero">
-    <div class="absolute inset-0 z-0 opacity-20 overflow-hidden">
-        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary rounded-full blur-[120px] animate-pulse"></div>
-        <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-secondary rounded-full blur-[120px] animate-pulse" style="animation-delay: 2s"></div>
+      <div class="header-actions">
+        <a class="icon-btn header-gh" href="https://github.com/Grombrindle" target="_blank" rel="noopener" aria-label="GitHub profile">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+        </a>
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle color theme" aria-pressed="false">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M19.4 4.6l-2.1 2.1M6.7 17.3l-2.1 2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 14.2A8.5 8.5 0 0 1 9.8 3.6a8.5 8.5 0 1 0 10.6 10.6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
-    <div class="relative z-10 max-w-7xl mx-auto px-8 text-center">
-        <span class="font-label text-secondary tracking-widest uppercase text-sm mb-4 block" id="hero-title">Information Technology Engineer</span>
-        <h1 class="font-headline text-5xl md:text-8xl font-extrabold text-white tracking-tighter mb-6 glitch" data-text="" id="hero-name">HAYDRA ALI</h1>
-        <div class="text-2xl md:text-3xl font-label text-primary-dim h-12 mb-12">
-            <span id="typed"></span>
-        </div>
-        <div class="flex justify-center gap-6 mb-12">
-            <a class="w-12 h-12 glass-card rounded-full flex items-center justify-center text-white hover:scale-110 active:scale-95 duration-200" href="#" id="github-icon" target="_blank">
-                <i class="fab fa-github text-xl"></i>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker mono" data-reveal><span class="pulse-dot" aria-hidden="true"></span> Damascus, Syria · Systems &amp; Software Engineering</p>
+          <h1 class="hero-name" data-scramble>HAYDRA ALI</h1>
+          <p class="hero-role" data-reveal data-delay="100">DevOps &amp; Systems Engineer <span class="sep" aria-hidden="true">/</span> Full-Stack Developer</p>
+          <p class="hero-lede" data-reveal data-delay="180">I design scalable backends, build modern frontends, and run the CI/CD pipelines and infrastructure that keep products reliable in production — from first commit to the 3 a.m. health check.</p>
+          <div class="hero-cta" data-reveal data-delay="260">
+            <a class="btn btn-solid" href="#projects">View projects
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M17 7H9M17 7v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <a class="w-12 h-12 glass-card rounded-full flex items-center justify-center text-white hover:scale-110 active:scale-95 duration-200" href="#" id="linkedin-icon" target="_blank">
-                <i class="fab fa-linkedin-in text-xl"></i>
-            </a>
-            <a class="w-12 h-12 glass-card rounded-full flex items-center justify-center text-white hover:scale-110 active:scale-95 duration-200" href="#" id="terminal-icon" target="_blank">
-                <span class="material-symbols-outlined">terminal</span>
-            </a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          </div>
+          <ul class="hero-links" data-reveal data-delay="340">
+            <li><a href="https://github.com/Grombrindle" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/haydra-ali-3a500b285/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg></a></li>
+            <li><a href="mailto:haydraali0000@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 6.5L12 13l8.5-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a></li>
+            <li><a href="https://grombrindle.github.io" target="_blank" rel="noopener" aria-label="Personal website">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3c2.8 2.6 4 5.6 4 9s-1.2 6.4-4 9c-2.8-2.6-4-5.6-4-9s1.2-6.4 4-9z" fill="none" stroke="currentColor" stroke-width="2"/></svg></a></li>
+          </ul>
+          <p class="hero-now mono" data-reveal data-delay="420">now: System Engineer @ ProResources · Full-Stack &amp; DevOps @ FutureX</p>
         </div>
-        <div class="flex flex-col md:flex-row justify-center gap-4">
-            <a href="#projects" class="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-on-primary-fixed font-bold rounded-md hover:scale-105 transition-transform duration-200 shadow-lg">
-                View Projects
-            </a>
-            <a href="#contact" class="px-8 py-4 glass-card text-white font-bold rounded-md hover:scale-105 transition-transform duration-200">
-                Get In Touch
-            </a>
+
+        <div class="hero-console" data-reveal data-delay="200">
+          <div class="console-card">
+            <div class="console-bar">
+              <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+              <span class="console-title mono">haydra@cluster: ~</span>
+            </div>
+            <div class="console-body mono" id="terminal" aria-hidden="true"></div>
+            <p class="sr-only">Haydra Ali — DevOps and Systems Engineer, Full-Stack Developer. Expertise: backend, frontend, CI/CD, cloud, AI infrastructure. Deploys to production.</p>
+            <div class="console-status mono" aria-hidden="true">
+              <div class="node"><i class="led"></i> node-01 · ROCm / Ollama</div>
+              <div class="node"><i class="led"></i> node-02 · GPU / LiteLLM</div>
+              <div class="node"><i class="led"></i> node-03 · Traefik / n8n</div>
+              <div class="node dim">local <span id="clock">--:--:--</span></div>
+              <div class="node dim">session <span id="uptime">0s</span></div>
+            </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Expertise Section -->
-<section class="py-24 bg-surface-container-low relative" id="expertise">
-    <div class="max-w-7xl mx-auto px-8">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-4">
-            <div class="max-w-2xl">
-                <h2 class="font-headline text-4xl font-bold text-white mb-6">Core Expertise</h2>
-                <p class="text-on-surface-variant text-lg leading-relaxed" id="expertise-desc">Full‑stack development, backend architecture, DevOps automation, and AI integration – delivering robust, scalable solutions.</p>
-            </div>
-            <div class="text-tertiary-dim font-label text-sm uppercase tracking-widest pb-2 border-b border-tertiary-dim">01 / Specialties</div>
+    <!-- ============ TICKER ============ -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track mono">
+        <span>Docker ✦ GitHub Actions ✦ AWS ✦ Laravel ✦ React ✦ Next.js ✦ Node.js ✦ TypeScript ✦ LiteLLM ✦ Traefik ✦ PostgreSQL ✦ Redis ✦ Spring Boot ✦ CI/CD ✦ Linux ✦ Go ✦ .NET ✦ MongoDB ✦ Ollama ROCm ✦ ComfyUI ✦&nbsp;</span>
+        <span>Docker ✦ GitHub Actions ✦ AWS ✦ Laravel ✦ React ✦ Next.js ✦ Node.js ✦ TypeScript ✦ LiteLLM ✦ Traefik ✦ PostgreSQL ✦ Redis ✦ Spring Boot ✦ CI/CD ✦ Linux ✦ Go ✦ .NET ✦ MongoDB ✦ Ollama ROCm ✦ ComfyUI ✦&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- ============ OVERVIEW ============ -->
+    <section class="section" id="overview">
+      <div class="container">
+        <header class="sec-head" data-reveal>
+          <p class="kicker mono">// 01 · overview</p>
+          <h2 class="sec-title"><span class="lm"><span class="lm-i">Engineer the product. Own the pipeline.</span></span></h2>
+        </header>
+        <div class="ov-grid">
+          <p class="ov-statement" data-reveal>Full-stack delivery with a systems-level mindset: I lead teams, ship complete products, and build the automation that keeps them stable — because a feature isn’t done until it’s reliable in production.</p>
+          <div class="ov-body" data-reveal data-delay="120">
+            <p>DevOps and Systems Engineer / Full-Stack Developer with experience leading development teams and delivering web and mobile applications end to end. I design scalable backend systems, build modern frontends, and apply CI/CD pipelines and DevOps practices that protect production stability.</p>
+            <p>Hands-on across <strong>PHP, Laravel, Node.js, React, Next.js and .NET</strong>, combined with a systems-level approach to infrastructure, automation and reliability — from database design to cloud cost optimization and GPU cluster architecture.</p>
+            <ul class="ov-facts mono">
+              <li><span>base</span> Damascus, Syria — remote experience across 4 time zones</li>
+              <li><span>focus</span> Backend · Frontend · CI/CD · Cloud · AI Infrastructure</li>
+              <li><span>degree</span> B.Sc. IT Engineering — Damascus University</li>
+              <li><span>languages</span> Arabic (native) · English (professional)</li>
+            </ul>
+          </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Card 1: Backend Engineering -->
-            <div class="glass-card p-10 rounded-xl group">
-                <span class="material-symbols-outlined text-4xl text-primary mb-8 block" style="font-variation-settings: 'FILL' 1;">architecture</span>
-                <h3 class="font-headline text-2xl font-bold text-white mb-4">Backend Engineering</h3>
-                <p class="text-on-surface-variant leading-relaxed mb-6">Building high‑performance RESTful APIs and monolithic applications with modern frameworks.</p>
-                <ul class="space-y-2 text-sm font-label text-primary-dim" id="backend-list">
-                    <!-- dynamically filled -->
-                </ul>
-            </div>
-            <!-- Card 2: DevOps & Automation -->
-            <div class="glass-card p-10 rounded-xl group">
-                <span class="material-symbols-outlined text-4xl text-secondary mb-8 block" style="font-variation-settings: 'FILL' 1;">cloud</span>
-                <h3 class="font-headline text-2xl font-bold text-white mb-4">DevOps & Automation</h3>
-                <p class="text-on-surface-variant leading-relaxed mb-6">CI/CD pipelines with GitHub Actions, Docker, server administration, and automated deployment workflows.</p>
-                <ul class="space-y-2 text-sm font-label text-secondary" id="devops-list">
-                    <!-- dynamic -->
-                </ul>
-            </div>
-            <!-- Card 3: AI Integration -->
-            <div class="glass-card p-10 rounded-xl group">
-                <span class="material-symbols-outlined text-4xl text-tertiary mb-8 block" style="font-variation-settings: 'FILL' 1;">neurology</span>
-                <h3 class="font-headline text-2xl font-bold text-white mb-4">AI Integration</h3>
-                <p class="text-on-surface-variant leading-relaxed mb-6">Leveraging prompt engineering and AI models to automate tasks and enhance application intelligence.</p>
-                <ul class="space-y-2 text-sm font-label text-tertiary-dim" id="ai-list">
-                    <!-- dynamic -->
-                </ul>
-            </div>
+        <div class="stats">
+          <div class="stat" data-reveal><span class="stat-n mono"><b data-count="5">0</b></span><span class="stat-l">Production platforms delivered end to end</span></div>
+          <div class="stat" data-reveal data-delay="80"><span class="stat-n mono"><b data-count="3">0</b>-node</span><span class="stat-l">Distributed AI compute cluster, sole architect</span></div>
+          <div class="stat" data-reveal data-delay="160"><span class="stat-n mono"><b data-count="2">0</b></span><span class="stat-l">Google Play launches — Nexa &amp; Gouri</span></div>
+          <div class="stat" data-reveal data-delay="240"><span class="stat-n mono"><b data-count="4">0</b></span><span class="stat-l">Markets shipped to — JO · SY · US · IQ</span></div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Skills Section (unchanged) -->
-<section class="py-24 bg-surface relative overflow-hidden" id="skills">
-    <div class="max-w-7xl mx-auto px-8 relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div>
-                <h2 class="font-headline text-4xl font-bold text-white mb-10">Technical Proficiency</h2>
-                <div class="space-y-12" id="skill-bars"></div>
-            </div>
-            <div class="glass-card p-12 rounded-2xl" id="tech-stack-cloud"></div>
+    <!-- ============ SKILLS ============ -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <header class="sec-head" data-reveal>
+          <p class="kicker mono">// 02 · skills</p>
+          <h2 class="sec-title"><span class="lm"><span class="lm-i">Technical arsenal</span></span></h2>
+          <p class="sec-sub">Production-proven tooling across the entire stack — chosen for reliability, not hype.</p>
+        </header>
+        <div class="skill-grid">
+          <div class="skill-card" data-reveal>
+            <h3 class="mono"><span class="idx">01</span> Backend &amp; APIs</h3>
+            <ul class="chips"><li>PHP</li><li>Laravel</li><li>Node.js</li><li>Express</li><li>NestJS</li><li>Java · Spring Boot</li><li>Go</li><li>C# · .NET</li><li>RESTful APIs</li><li>Microservices</li></ul>
+          </div>
+          <div class="skill-card" data-reveal data-delay="70">
+            <h3 class="mono"><span class="idx">02</span> Frontend</h3>
+            <ul class="chips"><li>React</li><li>Next.js</li><li>TypeScript</li><li>Tailwind CSS</li><li>Livewire · Alpine.js</li><li>Responsive UI</li></ul>
+          </div>
+          <div class="skill-card" data-reveal data-delay="140">
+            <h3 class="mono"><span class="idx">03</span> Data &amp; Storage</h3>
+            <ul class="chips"><li>MySQL</li><li>PostgreSQL</li><li>MongoDB</li><li>Redis</li><li>Database Optimization</li></ul>
+          </div>
+          <div class="skill-card" data-reveal data-delay="210">
+            <h3 class="mono"><span class="idx">04</span> DevOps &amp; Cloud</h3>
+            <ul class="chips"><li>Docker</li><li>GitHub Actions</li><li>CI/CD Pipelines</li><li>AWS Cloud</li><li>Linux</li><li>Server Administration</li><li>Traefik</li><li>Cloudflare Tunnels</li><li>DevOps Methodologies</li></ul>
+          </div>
+          <div class="skill-card" data-reveal data-delay="280">
+            <h3 class="mono"><span class="idx">05</span> AI Engineering</h3>
+            <ul class="chips"><li>Ollama · ROCm</li><li>LiteLLM</li><li>ComfyUI</li><li>n8n</li><li>OpenLit</li><li>AI Integration</li><li>Prompt Engineering</li></ul>
+          </div>
+          <div class="skill-card" data-reveal data-delay="350">
+            <h3 class="mono"><span class="idx">06</span> Security &amp; Operations</h3>
+            <ul class="chips"><li>Cybersecurity</li><li>System Monitoring</li><li>Health Checks</li><li>Incident Response</li><li>Git</li></ul>
+          </div>
         </div>
-    </div>
-</section>
-
-<!-- Featured Projects Section -->
-<section class="py-24 bg-surface-container-low" id="projects">
-    <div class="max-w-7xl mx-auto px-8">
-        <h2 class="font-headline text-4xl font-bold text-white mb-16 text-center">Featured Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="featured-projects-grid"></div>
-    </div>
-</section>
-
-<!-- More Projects Slider -->
-<section class="py-24 bg-surface" id="more-projects">
-    <div class="max-w-7xl mx-auto px-8">
-        <h2 class="font-headline text-4xl font-bold text-white mb-6 text-center">Other Notable Works</h2>
-        <p class="text-on-surface-variant text-center max-w-2xl mx-auto mb-12">A collection of additional projects, experiments, and tools I've built.</p>
-
-        <div class="relative">
-            <div class="overflow-hidden rounded-2xl" id="slider-wrapper">
-                <div class="flex gap-6 transition-transform duration-300 ease-out" id="slider-track"></div>
-            </div>
-            <button class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 w-12 h-12 glass-card rounded-full flex items-center justify-center text-white hover:scale-110 transition-all z-10" id="slider-prev">
-                <span class="material-symbols-outlined">chevron_left</span>
-            </button>
-            <button class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 w-12 h-12 glass-card rounded-full flex items-center justify-center text-white hover:scale-110 transition-all z-10" id="slider-next">
-                <span class="material-symbols-outlined">chevron_right</span>
-            </button>
-            <div class="flex justify-center gap-2 mt-8" id="slider-dots"></div>
+        <div class="pro-skills" data-reveal>
+          <h3 class="mono">How I operate</h3>
+          <ul class="chips chips-soft">
+            <li>Team Leadership</li><li>Technical Mentorship</li><li>Systems Architecture</li><li>Problem Solving</li><li>Analytical Thinking</li><li>Project Management</li><li>Agile Methodologies</li><li>Strategic Planning</li><li>Quality Assurance</li><li>Effective Communication</li><li>Client Relations</li><li>DevOps Principles</li>
+          </ul>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Contact Section (no form, only links) -->
-<section class="py-24 bg-surface-container-low" id="contact">
-    <div class="max-w-7xl mx-auto px-8">
-        <div class="glass-card p-12 rounded-2xl max-w-3xl mx-auto text-center">
-            <h2 class="font-headline text-4xl font-bold text-white mb-6">Let's Connect</h2>
-            <p class="text-on-surface-variant mb-10" id="contact-message">Open for backend leadership, full‑stack contracts, or innovative AI‑powered projects.</p>
-            <div class="flex flex-wrap justify-center gap-8" id="contact-links">
-                <!-- dynamic from config -->
-            </div>
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience">
+      <div class="container exp-grid">
+        <aside class="exp-aside" data-reveal>
+          <div class="exp-aside-inner">
+            <p class="kicker mono">// 03 · experience</p>
+            <h2 class="sec-title"><span class="lm"><span class="lm-i">Where I’ve shipped</span></span></h2>
+            <p class="sec-sub">From leading backend teams in Damascus to architecting GPU clusters and running AWS infrastructure — often several missions at once.</p>
+            <ul class="exp-index mono">
+              <li>ProResources Technology</li>
+              <li>FutureX</li>
+              <li>Confidential — AI Infra</li>
+              <li>TugOnn Schweiz</li>
+              <li>E-Solutions Group</li>
+            </ul>
+          </div>
+        </aside>
+
+        <div class="xp-wrap">
+          <article class="xp" data-reveal>
+            <header class="xp-head">
+              <div>
+                <h3 class="xp-role">System Engineer</h3>
+                <p class="xp-org">ProResources Technology <span class="xp-mode">· On-site</span></p>
+              </div>
+              <p class="xp-when mono">Jul 2026 — Present · Damascus, Syria</p>
+            </header>
+            <ul class="xp-points">
+              <li>Monitor health checks across the company’s built-in security solutions, tracking device and service reliability across client deployments.</li>
+              <li>Manage AWS infrastructure supporting a multi-software monitoring platform — optimizing cost, performance and security under strict in-house policies.</li>
+              <li>Support incident response, system monitoring and compliance-aware infrastructure practices in a cybersecurity-focused environment.</li>
+            </ul>
+            <ul class="xp-tags mono"><li>AWS</li><li>Security Ops</li><li>Monitoring</li><li>Incident Response</li></ul>
+          </article>
+
+          <article class="xp" data-reveal>
+            <header class="xp-head">
+              <div>
+                <h3 class="xp-role">Full Stack &amp; DevOps Engineer</h3>
+                <p class="xp-org">FutureX <span class="xp-mode">· Remote</span></p>
+              </div>
+              <p class="xp-when mono">Jun 2026 — Present · Jordan</p>
+            </header>
+            <ul class="xp-points">
+              <li>Develop and maintain full-stack applications with React and Laravel, delivering features end to end — from database design to responsive user interfaces.</li>
+              <li>Implement CI/CD pipelines, automated testing and deployment automation for reliable, frequent releases.</li>
+              <li>Ship production features with a distributed team, holding the bar on performance and code quality across the stack.</li>
+            </ul>
+            <ul class="xp-tags mono"><li>React</li><li>Laravel</li><li>CI/CD</li><li>Automated Testing</li></ul>
+          </article>
+
+          <article class="xp" data-reveal>
+            <header class="xp-head">
+              <div>
+                <h3 class="xp-role">System Engineer — AI Infrastructure</h3>
+                <p class="xp-org">Confidential Company <span class="xp-mode">· Confidential</span></p>
+              </div>
+              <p class="xp-when mono">Feb 2026 — Jul 2026</p>
+            </header>
+            <ul class="xp-points">
+              <li>Sole architect of a 3-node distributed AI compute cluster spanning AMD Radeon and NVIDIA GPUs — running Ollama ROCm, LiteLLM, n8n, Traefik and ComfyUI for video generation.</li>
+              <li>Designed the software architecture from the ground up: privacy-first PII redirection pipelines, autonomous cluster health management, and intelligent routing across local and cloud LLMs.</li>
+              <li>Built production infrastructure with Docker orchestration, Cloudflare tunnel networking, Redis semantic caching and OpenLit observability — enterprise-grade tooling from day one.</li>
+            </ul>
+            <ul class="xp-tags mono"><li>GPU Clusters</li><li>LiteLLM</li><li>Docker</li><li>Observability</li><li>PII Pipelines</li></ul>
+          </article>
+
+          <article class="xp" data-reveal>
+            <header class="xp-head">
+              <div>
+                <h3 class="xp-role">DevOps &amp; Full-Stack Engineer <span class="xp-intern mono">Internship</span></h3>
+                <p class="xp-org">TugOnn Schweiz <span class="xp-mode">· Remote</span></p>
+              </div>
+              <p class="xp-when mono">Feb 2026 — May 2026 · Switzerland</p>
+            </header>
+            <ul class="xp-points">
+              <li>Orchestrated end-to-end CI/CD pipelines with GitHub Actions and Docker — linting, building and testing — significantly improving deployment efficiency.</li>
+              <li>Managed staging deployments on Vercel/Render and environment configuration via GitHub Environments.</li>
+              <li>Resolved complex TypeScript/React integration challenges across Express and Next.js, improving stability and performance.</li>
+              <li>Received a formal recommendation from Founder/CEO Vygantas Tugaudis for outstanding contributions across DevOps, infrastructure and development.</li>
+            </ul>
+            <ul class="xp-tags mono"><li>GitHub Actions</li><li>Docker</li><li>Next.js</li><li>TypeScript</li></ul>
+          </article>
+
+          <article class="xp" data-reveal>
+            <header class="xp-head">
+              <div>
+                <h3 class="xp-role">Backend Team Leader</h3>
+                <p class="xp-org">E-Solutions Group <span class="xp-mode">· On-site</span></p>
+              </div>
+              <p class="xp-when mono">Aug 2025 — Jul 2026 · Damascus, Syria</p>
+            </header>
+            <ul class="xp-points">
+              <li>Led and mentored development teams through delivery of scalable, high-performance applications and websites, with secondary full-stack responsibilities.</li>
+              <li>Instituted best practices for code quality, efficiency and DevOps — keeping projects on schedule and deployments robust.</li>
+              <li>Designed and built robust RESTful APIs and scalable monolithic applications in Laravel; overhauled existing systems and optimized databases for measurable gains in efficiency and reliability.</li>
+            </ul>
+            <ul class="xp-tags mono"><li>Leadership</li><li>Laravel</li><li>REST APIs</li><li>Mentoring</li></ul>
+          </article>
+
+          <article class="xp" data-reveal>
+            <header class="xp-head">
+              <div>
+                <h3 class="xp-role">Backend Developer</h3>
+                <p class="xp-org">E-Solutions Group <span class="xp-mode">· On-site</span></p>
+              </div>
+              <p class="xp-when mono">Mar 2025 — Aug 2025 · Damascus, Syria</p>
+            </header>
+            <ul class="xp-points">
+              <li>Developed cross-platform solutions across PHP/Laravel, Java/Spring Boot (JWT security, appointment scheduling) and NestJS (TypeScript APIs).</li>
+              <li>Built .NET (C#) desktop applications for gym management systems with fingerprint authentication.</li>
+              <li>Contributed across backend systems including marketplace features and real-time messaging.</li>
+            </ul>
+            <ul class="xp-tags mono"><li>Laravel</li><li>Spring Boot</li><li>NestJS</li><li>.NET</li></ul>
+          </article>
         </div>
+      </div>
+    </section>
+
+    <!-- ============ INFRASTRUCTURE ============ -->
+    <section class="section section-alt" id="infrastructure">
+      <div class="container">
+        <header class="sec-head" data-reveal>
+          <p class="kicker mono">// 04 · devops &amp; infrastructure</p>
+          <h2 class="sec-title"><span class="lm"><span class="lm-i">Reliability is a feature</span></span></h2>
+          <p class="sec-sub">Infrastructure I’ve designed, automated and operated — from release pipelines to a self-designed GPU cluster.</p>
+        </header>
+
+        <div class="infra-grid">
+          <article class="infra-card" data-reveal>
+            <div class="infra-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 17l4-4-4-4M10 19h10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>CI/CD &amp; Release Automation</h3>
+            <p>End-to-end pipelines with GitHub Actions and Docker — linting, building, testing — plus staged rollouts on Vercel/Render governed through GitHub Environments. Releases become frequent and uneventful.</p>
+            <ul class="xp-tags mono"><li>GitHub Actions</li><li>Docker</li><li>GitHub Environments</li></ul>
+          </article>
+          <article class="infra-card" data-reveal data-delay="80">
+            <div class="infra-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 18a4 4 0 0 1-.6-7.95A5.5 5.5 0 0 1 17 8.6 3.8 3.8 0 0 1 17.8 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12v8M9 17l3 3 3-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Cloud &amp; Systems</h3>
+            <p>AWS infrastructure managed for cost, performance and security under strict policies — backed by deep Linux administration, from self-hosted servers to enterprise monitoring platforms.</p>
+            <ul class="xp-tags mono"><li>AWS</li><li>Linux</li><li>Server Admin</li></ul>
+          </article>
+          <article class="infra-card" data-reveal data-delay="160">
+            <div class="infra-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="14" y="4" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="8.5" y="14" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6.5 11v2h11v-2M12 13v1" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+            <h3>AI Infrastructure</h3>
+            <p>Sole architect of a 3-node GPU cluster across AMD ROCm and NVIDIA: Ollama, LiteLLM routing between local and cloud LLMs, ComfyUI video generation, n8n automation and PII-redirection pipelines.</p>
+            <ul class="xp-tags mono"><li>Ollama ROCm</li><li>LiteLLM</li><li>Traefik</li></ul>
+          </article>
+          <article class="infra-card" data-reveal data-delay="240">
+            <div class="infra-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 4.4-3.2 7.8-8 9-4.8-1.2-8-4.6-8-9V7l8-4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Observability &amp; Security</h3>
+            <p>Health-check monitoring across devices and services, OpenLit observability, Redis semantic caching, Cloudflare tunnel networking — with incident response in security-first environments.</p>
+            <ul class="xp-tags mono"><li>OpenLit</li><li>Redis</li><li>Cybersecurity</li></ul>
+          </article>
+        </div>
+
+        <figure class="pipeline" data-reveal>
+          <svg viewBox="0 0 860 120" role="img" aria-label="Automated release pipeline: commit, lint, test, build, deploy">
+            <line class="flow-line" x1="120" y1="60" x2="220" y2="60"/>
+            <line class="flow-line" x1="280" y1="60" x2="380" y2="60"/>
+            <line class="flow-line" x1="440" y1="60" x2="540" y2="60"/>
+            <line class="flow-line" x1="600" y1="60" x2="700" y2="60"/>
+            <g class="stage"><rect x="30" y="34" width="90" height="52" rx="10"/><text x="75" y="65">commit</text></g>
+            <g class="stage"><rect x="220" y="34" width="60" height="52" rx="10"/><text x="250" y="65">lint</text></g>
+            <g class="stage"><rect x="380" y="34" width="60" height="52" rx="10"/><text x="410" y="65">test</text></g>
+            <g class="stage"><rect x="540" y="34" width="60" height="52" rx="10"/><text x="570" y="65">build</text></g>
+            <g class="stage stage-ok"><rect x="700" y="34" width="130" height="52" rx="10"/><text x="765" y="65">deploy ✓</text></g>
+          </svg>
+          <figcaption class="mono">github-actions.yml — every merge is linted, tested, built and shipped automatically</figcaption>
+        </figure>
+
+        <figure class="cluster" data-reveal>
+          <svg viewBox="0 0 860 190" role="img" aria-label="Three-node distributed AI compute cluster topology">
+            <line class="flow-line" x1="290" y1="95" x2="350" y2="95"/>
+            <line class="flow-line" x1="510" y1="95" x2="570" y2="95"/>
+            <path class="flow-line" d="M200 130 C 280 175, 580 175, 660 130" fill="none"/>
+            <g class="cnode"><rect x="130" y="55" width="160" height="80" rx="12"/><text x="210" y="88" class="cn-t">node-01</text><text x="210" y="112" class="cn-s">AMD ROCm · Ollama</text></g>
+            <g class="cnode"><rect x="350" y="55" width="160" height="80" rx="12"/><text x="430" y="88" class="cn-t">node-02</text><text x="430" y="112" class="cn-s">NVIDIA · LiteLLM</text></g>
+            <g class="cnode"><rect x="570" y="55" width="160" height="80" rx="12"/><text x="650" y="88" class="cn-t">node-03</text><text x="650" y="112" class="cn-s">Traefik · n8n · ComfyUI</text></g>
+            <circle class="cled" cx="146" cy="70" r="4"/><circle class="cled" cx="366" cy="70" r="4"/><circle class="cled" cx="586" cy="70" r="4"/>
+          </svg>
+          <figcaption class="mono">AI compute cluster — self-designed topology with autonomous health management &amp; local/cloud model routing</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <header class="sec-head" data-reveal>
+          <p class="kicker mono">// 05 · selected projects</p>
+          <h2 class="sec-title"><span class="lm"><span class="lm-i">Products in the wild</span></span></h2>
+          <p class="sec-sub">Live platforms across Jordan, Syria, the USA and Iraq — each delivered end to end.</p>
+        </header>
+
+        <div class="proj-grid">
+          <article class="proj" data-reveal>
+            <div class="proj-media" aria-hidden="true">
+              <svg viewBox="0 0 400 225">
+                <rect x="48" y="98" width="52" height="44" rx="4"/><rect x="58" y="60" width="52" height="44" rx="4" class="alt"/><rect x="106" y="98" width="52" height="44" rx="4" class="alt"/>
+                <path class="dash" d="M170 120 C 220 120, 240 90, 285 84" fill="none"/>
+                <circle cx="300" cy="80" r="14" class="accfill"/><circle cx="300" cy="80" r="5" class="core"/>
+                <rect x="262" y="128" width="76" height="34" rx="6"/><circle cx="280" cy="166" r="8" class="accfill"/><circle cx="322" cy="166" r="8" class="accfill"/>
+              </svg>
+            </div>
+            <div class="proj-body">
+              <p class="proj-meta mono">Warehouse management · Jordan</p>
+              <h3>Nexa</h3>
+              <p>Full-stack customer–supplier warehouse management system: complete backend and React admin dashboard, plus three mobile apps for suppliers, customers and drivers. Real-time order tracking with a live delivery-car simulation on Google Maps and real-time customer–support chat — covering the full lifecycle from catalog to delivery and payment.</p>
+              <ul class="xp-tags mono"><li>React Admin</li><li>Real-time Tracking</li><li>Google Maps</li><li>3 Mobile Apps</li></ul>
+              <div class="proj-links"><span class="pbadge mono">● Available on Google Play</span></div>
+            </div>
+          </article>
+
+          <article class="proj" data-reveal data-delay="80">
+            <div class="proj-media" aria-hidden="true">
+              <svg viewBox="0 0 400 225">
+                <path d="M200 42c0 10-12 12-12 22 0 6 5 10 12 10s12-4 12-10" fill="none" class="accstroke" stroke-width="4" stroke-linecap="round"/>
+                <path d="M200 74 L120 108 M200 74 L280 108" fill="none" class="accstroke" stroke-width="4" stroke-linecap="round"/>
+                <path d="M150 104 l-14 78 h128 l-14 -78 c-14 12 -36 18 -50 18 s-36 -6 -50 -18z" class="alt"/>
+                <rect x="292" y="60" width="56" height="34" rx="6"/><circle cx="306" cy="77" r="4" class="core"/>
+              </svg>
+            </div>
+            <div class="proj-body">
+              <p class="proj-meta mono">E-commerce · Syria</p>
+              <h3>Velvet</h3>
+              <p>Clothing e-commerce platform for the Syrian market. Built the full backend and Next.js storefront — product catalogs, orders, checkout and admin management — with a responsive, localized storefront.</p>
+              <ul class="xp-tags mono"><li>Next.js</li><li>Full-stack</li><li>Localization</li></ul>
+              <div class="proj-links"><a class="plink mono" href="https://velvet-web.e-solutionsgroup.org/en/woman" target="_blank" rel="noopener">velvet-web.e-solutionsgroup.org ↗</a></div>
+            </div>
+          </article>
+
+          <article class="proj" data-reveal>
+            <div class="proj-media" aria-hidden="true">
+              <svg viewBox="0 0 400 225">
+                <rect x="60" y="118" width="90" height="30" rx="4" class="alt"/><rect x="72" y="88" width="90" height="30" rx="4"/><rect x="84" y="58" width="90" height="30" rx="4" class="alt"/>
+                <rect x="220" y="70" width="120" height="76" rx="10"/><rect x="220" y="92" width="120" height="14" class="accfill"/>
+                <path d="M238 124h40M238 134h24" class="dash" fill="none"/>
+              </svg>
+            </div>
+            <div class="proj-body">
+              <p class="proj-meta mono">B2B e-commerce · USA</p>
+              <h3>Gouri Distributions</h3>
+              <p>Business-to-business e-commerce platform for the US market, built from scratch with Stripe-powered online payments. Owned database planning and full-stack development through to a successful Google Play launch.</p>
+              <ul class="xp-tags mono"><li>Stripe</li><li>Database Design</li><li>Full-stack</li></ul>
+              <div class="proj-links">
+                <a class="plink mono" href="https://www.gouridistribution.com" target="_blank" rel="noopener">gouridistribution.com ↗</a>
+                <a class="plink mono" href="https://play.google.com/store/apps/details?id=com.gouri.app" target="_blank" rel="noopener">Google Play ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj" data-reveal data-delay="80">
+            <div class="proj-media" aria-hidden="true">
+              <svg viewBox="0 0 400 225">
+                <path d="M30 160h340" class="accstroke" stroke-width="3" stroke-linecap="round"/>
+                <path class="dash" d="M30 176h340" fill="none"/>
+                <path d="M120 130 c10 -34 60 -46 96 -40 l70 12 c24 4 34 14 36 28 h-202z"/><circle cx="160" cy="140" r="16" class="accfill"/><circle cx="160" cy="140" r="6" class="core"/><circle cx="272" cy="140" r="16" class="accfill"/><circle cx="272" cy="140" r="6" class="core"/>
+              </svg>
+            </div>
+            <div class="proj-body">
+              <p class="proj-meta mono">Automotive · Iraq</p>
+              <h3>Chery Iraq</h3>
+              <p>Official website of Chery Automobiles in Iraq. Worked across frontend and backend on the overhaul and feature enhancement of a specialized Laravel-built car-sales platform.</p>
+              <ul class="xp-tags mono"><li>Laravel</li><li>Frontend + Backend</li><li>Platform Overhaul</li></ul>
+              <div class="proj-links"><a class="plink mono" href="https://www.cheryiraq.com" target="_blank" rel="noopener">cheryiraq.com ↗</a></div>
+            </div>
+          </article>
+
+          <article class="proj proj-wide" data-reveal>
+            <div class="proj-media" aria-hidden="true">
+              <svg viewBox="0 0 400 225">
+                <path d="M70 60 h150 a16 16 0 0 1 16 16 v54 a16 16 0 0 1 -16 16 h-96 l-30 26 v-26 h-24 a16 16 0 0 1 -16 -16 v-54 a16 16 0 0 1 16 -16z"/>
+                <circle cx="122" cy="103" r="6" class="core"/><circle cx="146" cy="103" r="6" class="core"/><circle cx="170" cy="103" r="6" class="core"/>
+                <path d="M330 168 h-130 a14 14 0 0 1 -14 -14 v-44 a14 14 0 0 1 14 -14 h18 v-8 a14 14 0 0 1 14 -14 h36 a14 14 0 0 1 14 14 v8 h18" class="alt"/>
+                <rect x="244" y="120" width="56" height="10" rx="5" class="accfill"/>
+              </svg>
+            </div>
+            <div class="proj-body">
+              <p class="proj-meta mono">Marketplace &amp; jobs · Syria</p>
+              <h3>BlueBuySale</h3>
+              <p>Marketplace and job-search platform. Built and maintained core marketplace and job-search features on the backend, alongside a WhatsApp-style real-time messaging system implemented with Laravel Reverb for seamless user interaction.</p>
+              <ul class="xp-tags mono"><li>Laravel Reverb</li><li>Real-time Messaging</li><li>Marketplace</li><li>Job Search</li></ul>
+              <div class="proj-links"><a class="plink mono" href="https://www.bluebuysale.com/en" target="_blank" rel="noopener">bluebuysale.com ↗</a></div>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="more-title mono" data-reveal>// more builds</h3>
+        <div class="more-grid">
+          <article class="more-card" data-reveal><h4>PDF Editor Research Software</h4><p>PDF editing and annotation platform for researchers.</p><span class="mono">Laravel · pdf.js</span></article>
+          <article class="more-card" data-reveal data-delay="60"><h4>AI-Integrated Task Manager</h4><p>Intelligent task management with AI-driven prompt engineering for architects.</p><span class="mono">AI · Prompt Engineering</span></article>
+          <article class="more-card" data-reveal data-delay="120"><h4>SHM Hardware Marketplace</h4><p>Full-stack marketplace for PC hardware.</p><span class="mono">Node.js · Express · Next.js</span></article>
+          <article class="more-card" data-reveal data-delay="180"><h4>Dr Calories</h4><p>Calorie-tracking nutrition management app with a professional dashboard.</p><span class="mono">Nutrition · Dashboard</span></article>
+          <article class="more-card" data-reveal data-delay="240"><h4>CI/CD Pipeline Infrastructure</h4><p>TugOnn Schweiz pipeline infrastructure — lint, build, test, deploy.</p><span class="mono">GitHub Actions · Docker</span></article>
+          <article class="more-card" data-reveal data-delay="300"><h4>Fingerprint Machine</h4><p>Gym management desktop application with biometric authentication.</p><span class="mono">C# · .NET</span></article>
+          <article class="more-card" data-reveal data-delay="360"><h4>Self-Hosted Server</h4><p>Personal server administration and automation.</p><span class="mono">Linux · Automation</span></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORKFLOW ============ -->
+    <section class="section section-alt" id="workflow">
+      <div class="container">
+        <header class="sec-head" data-reveal>
+          <p class="kicker mono">// 06 · workflow</p>
+          <h2 class="sec-title"><span class="lm"><span class="lm-i">How the work gets done</span></span></h2>
+        </header>
+        <ol class="steps">
+          <li class="step" data-reveal><span class="step-n mono">01</span><h3>Architect</h3><p>Systems thinking first: model the domain, design the APIs and data layer, and choose boring, reliable technology where it counts.</p></li>
+          <li class="step" data-reveal data-delay="80"><span class="step-n mono">02</span><h3>Build end-to-end</h3><p>One accountable delivery path from database schema to responsive UI — backend, frontend and mobile working together.</p></li>
+          <li class="step" data-reveal data-delay="160"><span class="step-n mono">03</span><h3>Automate</h3><p>Lint, test, build, deploy. CI/CD pipelines turn releases into frequent, uneventful events instead of risky launches.</p></li>
+          <li class="step" data-reveal data-delay="240"><span class="step-n mono">04</span><h3>Operate</h3><p>Health checks, monitoring, cost tuning and incident response keep systems stable long after launch day.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section class="section" id="education">
+      <div class="container">
+        <header class="sec-head" data-reveal>
+          <p class="kicker mono">// 07 · education &amp; languages</p>
+          <h2 class="sec-title"><span class="lm"><span class="lm-i">Foundations</span></span></h2>
+        </header>
+        <div class="edu-grid">
+          <article class="edu-card" data-reveal>
+            <p class="mono edu-k">B.Sc. Information Technology Engineering</p>
+            <h3>Damascus University</h3>
+            <p class="edu-meta mono">Damascus, Syria · GPA 3.2 / 4.0</p>
+            <p>Specialization in Network Engineering, DevOps and Systems Architecture — the academic base behind a systems-level approach to software.</p>
+          </article>
+          <article class="edu-card" data-reveal data-delay="100">
+            <p class="mono edu-k">Languages</p>
+            <ul class="lang-list">
+              <li><span>Arabic</span><span class="lang-bar" aria-hidden="true"><i style="--w:100%"></i></span><span class="mono">Native</span></li>
+              <li><span>English</span><span class="lang-bar" aria-hidden="true"><i style="--w:82%"></i></span><span class="mono">Professional</span></li>
+            </ul>
+            <p>Comfortable collaborating with distributed, international teams across time zones — Switzerland, Jordan and remote-first environments.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section-contact" id="contact">
+      <div class="container">
+        <header class="sec-head" data-reveal>
+          <p class="kicker mono">// 08 · contact</p>
+          <h2 class="sec-title"><span class="lm"><span class="lm-i">Let’s build something reliable.</span></span></h2>
+          <p class="sec-sub">Open to conversations with recruiters, teams and clients — whether it’s full-stack delivery, DevOps practice or infrastructure that needs to stay up.</p>
+        </header>
+
+        <div class="contact-mail" data-reveal>
+          <a class="mail-big mono" href="mailto:haydraali0000@gmail.com">haydraali0000@gmail.com</a>
+          <button class="btn btn-ghost" type="button" data-copy="haydraali0000@gmail.com">Copy email</button>
+        </div>
+
+        <div class="contact-grid">
+          <a class="c-card" href="https://github.com/Grombrindle" target="_blank" rel="noopener" data-reveal>
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+            <span class="c-l">GitHub</span><span class="c-v mono">Grombrindle</span><span class="c-a mono">↗</span>
+          </a>
+          <a class="c-card" href="https://www.linkedin.com/in/haydra-ali-3a500b285/" target="_blank" rel="noopener" data-reveal data-delay="70">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            <span class="c-l">LinkedIn</span><span class="c-v mono">haydra-ali</span><span class="c-a mono">↗</span>
+          </a>
+          <a class="c-card" href="https://grombrindle.github.io" target="_blank" rel="noopener" data-reveal data-delay="140">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3c2.8 2.6 4 5.6 4 9s-1.2 6.4-4 9c-2.8-2.6-4-5.6-4-9s1.2-6.4 4-9z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <span class="c-l">Portfolio</span><span class="c-v mono">grombrindle.github.io</span><span class="c-a mono">↗</span>
+          </a>
+          <a class="c-card" href="tel:+963997149930" data-reveal data-delay="210">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            <span class="c-l">Phone</span><span class="c-v mono">+963 997 149 930</span><span class="c-a mono">↗</span>
+          </a>
+        </div>
+
+        <p class="contact-loc mono" data-reveal>Based in Damascus, Syria · Experienced with fully remote teams · Arabic native · English professional</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="f-brand">
+        <p class="mono">haydra<span class="acc">.</span>ali — DevOps &amp; Systems Engineer · Full-Stack Developer</p>
+        <p class="f-note">© <span id="year">2026</span> Haydra Ali. Built with plain HTML, CSS and JavaScript — no frameworks, no build step.</p>
+      </div>
+      <nav class="f-nav mono" aria-label="Footer">
+        <a href="#overview">Overview</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+      </nav>
     </div>
-</section>
+  </footer>
 
-<!-- Footer -->
-<footer class="bg-[#060e20] w-full border-t border-white/5 py-12">
-    <div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 gap-6 font-['Space_Grotesk'] text-sm tracking-wide">
-        <div class="text-lg font-black text-white" id="footer-name">HAYDRA ALI</div>
-        <div class="flex gap-8" id="footer-links"></div>
-        <div class="text-slate-500" id="copyright"></div>
-    </div>
-</footer>
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
 
-<!-- Back to top button -->
-<button class="fixed bottom-8 right-8 w-12 h-12 glass-card rounded-full flex items-center justify-center text-white opacity-0 transition-opacity duration-300 z-50" id="back-to-top">
-    <span class="material-symbols-outlined">arrow_upward</span>
-</button>
-
-<script src="js/config.js"></script>
-<script src="js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+
+
+              <script>
+                              // script.js — Haydra Ali · Portfolio
+(function () {
+  "use strict";
+
+  document.documentElement.classList.add("js");
+  var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ============ THEME ============ */
+  var rootEl = document.documentElement;
+  var themeBtn = document.getElementById("themeToggle");
+
+  function applyTheme(theme) {
+    rootEl.setAttribute("data-theme", theme);
+    try { localStorage.setItem("ha-theme", theme); } catch (e) {}
+    if (themeBtn) themeBtn.setAttribute("aria-pressed", theme === "light" ? "true" : "false");
+  }
+  applyTheme(rootEl.getAttribute("data-theme") || "dark");
+
+  if (themeBtn) {
+    themeBtn.addEventListener("click", function () {
+      applyTheme(rootEl.getAttribute("data-theme") === "light" ? "dark" : "light");
+    });
+  }
+
+  /* ============ HEADER / PROGRESS / TO-TOP ============ */
+  var header = document.getElementById("siteHeader");
+  var progressBar = document.getElementById("progressBar");
+  var toTopBtn = document.getElementById("toTop");
+
+  function onScrollFrame() {
+    var y = window.scrollY || document.documentElement.scrollTop;
+    if (header) header.classList.toggle("scrolled", y > 12);
+    if (progressBar) {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      progressBar.style.width = (max > 0 ? (y / max) * 100 : 0) + "%";
+    }
+    if (toTopBtn) toTopBtn.classList.toggle("show", y > 640);
+  }
+  window.addEventListener("scroll", onScrollFrame, { passive: true });
+  onScrollFrame();
+
+  if (toTopBtn) {
+    toTopBtn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: reducedMotion ? "auto" : "smooth" });
+    });
+  }
+
+  /* ============ MOBILE NAV ============ */
+  var navToggle = document.getElementById("navToggle");
+  var navPanel = document.getElementById("siteNav");
+
+  function setNav(open) {
+    document.body.classList.toggle("nav-open", open);
+    if (navToggle) {
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+      navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    }
+  }
+  if (navToggle) {
+    navToggle.addEventListener("click", function () {
+      setNav(!document.body.classList.contains("nav-open"));
+    });
+  }
+  if (navPanel) {
+    navPanel.addEventListener("click", function (ev) {
+      if (ev.target.closest("a")) setNav(false);
+    });
+  }
+  document.addEventListener("keydown", function (ev) {
+    if (ev.key === "Escape") setNav(false);
+  });
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 900) setNav(false);
+  });
+
+  /* ============ SCROLL SPY ============ */
+  var spySections = Array.prototype.slice.call(document.querySelectorAll("main section[id]"));
+  var spyLinks = {};
+  if (navPanel) {
+    navPanel.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      spyLinks[link.getAttribute("href").slice(1)] = link;
+    });
+  }
+  var spyObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        Object.keys(spyLinks).forEach(function (id) {
+          spyLinks[id].removeAttribute("aria-current");
+        });
+        var active = spyLinks[entry.target.id];
+        if (active) active.setAttribute("aria-current", "true");
+      }
+    });
+  }, { rootMargin: "-38% 0px -55% 0px" });
+  spySections.forEach(function (sec) { spyObserver.observe(sec); });
+
+  /* ============ SCROLL REVEAL ============ */
+  var revealEls = Array.prototype.slice.call(document.querySelectorAll("[data-reveal]"));
+  if (reducedMotion || !("IntersectionObserver" in window)) {
+    revealEls.forEach(function (el) { el.classList.add("in-view"); });
+  } else {
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var delay = entry.target.getAttribute("data-delay");
+          if (delay) entry.target.style.transitionDelay = delay + "ms";
+          entry.target.classList.add("in-view");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+    revealEls.forEach(function (el) { revealObserver.observe(el); });
+  }
+
+  /* ============ SCRAMBLE-DECODE TITLE ============ */
+  var scrambleEl = document.querySelector("[data-scramble]");
+  if (scrambleEl && !reducedMotion) {
+    var finalText = scrambleEl.textContent.trim();
+    var glyphPool = "#$%&@01<>/\\*+=";
+    var frame = 0;
+    var totalFrames = 34;
+    scrambleEl.textContent = "";
+    var scrambleTimer = window.setInterval(function () {
+      frame++;
+      var progress = frame / totalFrames;
+      var solvedCount = Math.floor(progress * finalText.length);
+      var output = "";
+      for (var ci = 0; ci < finalText.length; ci++) {
+        var ch = finalText.charAt(ci);
+        if (ch === " ") { output += " "; continue; }
+        output += ci < solvedCount ? ch : glyphPool.charAt(Math.floor(Math.random() * glyphPool.length));
+      }
+      scrambleEl.textContent = output;
+      if (frame >= totalFrames) {
+        scrambleEl.textContent = finalText;
+        window.clearInterval(scrambleTimer);
+      }
+    }, 42);
+  }
+
+  /* ============ TERMINAL TYPING ============ */
+  var terminalEl = document.getElementById("terminal");
+  var termLines = [
+    { prompt: "whoami" },
+    { out: "Haydra Ali — DevOps & Systems Engineer · Full-Stack Developer" },
+    { prompt: "ls ./expertise" },
+    { out: "backend/  frontend/  ci-cd/  cloud/  ai-infra/" },
+    { prompt: "./deploy --production" },
+    { out: "✔ lint   ✔ tests   ✔ build → shipped", ok: true }
+  ];
+
+  function renderTerminalInstant() {
+    if (!terminalEl) return;
+    terminalEl.innerHTML = "";
+    termLines.forEach(function (line) {
+      var row = document.createElement("div");
+      row.className = "tl";
+      if (line.prompt !== undefined) {
+        row.innerHTML = '<span class="tp">➜ ~</span>';
+        row.appendChild(document.createTextNode(line.prompt));
+      } else {
+        row.classList.add("out");
+        if (line.ok) row.classList.add("ok");
+        row.textContent = line.out;
+      }
+      terminalEl.appendChild(row);
+    });
+    var last = document.createElement("div");
+    last.className = "tl";
+    last.innerHTML = '<span class="tp">➜ ~</span><span class="caret"></span>';
+    terminalEl.appendChild(last);
+  }
+
+  function typeTerminal() {
+    if (!terminalEl) return;
+    terminalEl.innerHTML = "";
+    var caret = document.createElement("span");
+    caret.className = "caret";
+    var lineIdx = 0;
+    var finished = false;
+
+    function nextLine() {
+      if (finished) return;
+      if (lineIdx >= termLines.length) {
+        var idle = document.createElement("div");
+        idle.className = "tl";
+        idle.innerHTML = '<span class="tp">➜ ~</span>';
+        idle.appendChild(caret);
+        terminalEl.appendChild(idle);
+        finished = true;
+        return;
+      }
+      var line = termLines[lineIdx];
+      lineIdx++;
+      if (line.prompt !== undefined) {
+        var row = document.createElement("div");
+        row.className = "tl";
+        var prefix = document.createElement("span");
+        prefix.className = "tp";
+        prefix.textContent = "➜ ~";
+        var textSpan = document.createElement("span");
+        row.appendChild(prefix);
+        row.appendChild(textSpan);
+        row.appendChild(caret);
+        terminalEl.appendChild(row);
+        var pos = 0;
+        var typeTimer = window.setInterval(function () {
+          pos++;
+          textSpan.textContent = line.prompt.slice(0, pos);
+          if (pos >= line.prompt.length) {
+            window.clearInterval(typeTimer);
+            window.setTimeout(nextLine, 300);
+          }
+        }, 34);
+      } else {
+        var outRow = document.createElement("div");
+        outRow.className = "tl out" + (line.ok ? " ok" : "");
+        outRow.textContent = line.out;
+        terminalEl.appendChild(outRow);
+        window.setTimeout(nextLine, 200);
+      }
+    }
+    nextLine();
+
+    if (terminalEl) {
+      terminalEl.addEventListener("click", function () {
+        if (!finished) { finished = true; renderTerminalInstant(); }
+      }, { once: true });
+    }
+  }
+
+  if (terminalEl) {
+    if (reducedMotion) renderTerminalInstant();
+    else window.setTimeout(typeTerminal, 500);
+  }
+
+  /* ============ CLOCK + SESSION UPTIME ============ */
+  var clockEl = document.getElementById("clock");
+  var uptimeEl = document.getElementById("uptime");
+  var bootTime = Date.now();
+
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+  function tickConsole() {
+    var now = new Date();
+    if (clockEl) clockEl.textContent = pad(now.getHours()) + ":" + pad(now.getMinutes()) + ":" + pad(now.getSeconds());
+    if (uptimeEl) {
+      var secs = Math.floor((Date.now() - bootTime) / 1000);
+      var h = Math.floor(secs / 3600);
+      var m = Math.floor((secs % 3600) / 60);
+      var s = secs % 60;
+      uptimeEl.textContent = h > 0 ? h + "h " + pad(m) + "m" : (m > 0 ? m + "m " + pad(s) + "s" : s + "s");
+    }
+  }
+  tickConsole();
+  window.setInterval(tickConsole, 1000);
+
+  /* ============ ANIMATED COUNTERS ============ */
+  var counterEls = Array.prototype.slice.call(document.querySelectorAll("[data-count]"));
+  function animateCounter(el) {
+    var target = parseInt(el.getAttribute("data-count"), 10) || 0;
+    if (reducedMotion) { el.textContent = String(target); return; }
+    var duration = 1200;
+    var start = null;
+    function stepFrame(ts) {
+      if (!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = String(Math.round(eased * target));
+      if (progress < 1) window.requestAnimationFrame(stepFrame);
+    }
+    window.requestAnimationFrame(stepFrame);
+  }
+  if ("IntersectionObserver" in window && !reducedMotion) {
+    var counterObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    counterEls.forEach(function (el) { counterObserver.observe(el); });
+  } else {
+    counterEls.forEach(function (el) { el.textContent = el.getAttribute("data-count"); });
+  }
+
+  /* ============ COPY EMAIL ============ */
+  var copyButtons = Array.prototype.slice.call(document.querySelectorAll("[data-copy]"));
+  copyButtons.forEach(function (btn) {
+    var originalLabel = btn.textContent;
+    btn.addEventListener("click", function () {
+      var value = btn.getAttribute("data-copy");
+      function done(ok) {
+        btn.textContent = ok ? "Copied ✓" : "Copy failed";
+        window.setTimeout(function () { btn.textContent = originalLabel; }, 1800);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(value).then(function () { done(true); }, function () { done(false); });
+      } else {
+        var helper = document.createElement("textarea");
+        helper.value = value;
+        helper.style.position = "fixed";
+        helper.style.opacity = "0";
+        document.body.appendChild(helper);
+        helper.select();
+        var ok = false;
+        try { ok = document.execCommand("copy"); } catch (e) {}
+        document.body.removeChild(helper);
+        done(ok);
+      }
+    });
+  });
+
+  /* ============ FOOTER YEAR ============ */
+  var yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+})();
+
+
+              </script>
+                        </body>
+                        </html>
+                    
